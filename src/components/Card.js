@@ -15,7 +15,7 @@ function CardLink ({ children, link }) {
     : null;
 }
 
-function Card ({ children, className = "", link="/", linkText="Link", label="label", placeholder="pl;aceholder" }) {
+function Card ({ children, className = "", link, linkText, label, placeholder }) {
     return (
         <div className={`bg-lightless dark:bg-darkless p-5 rounded-lg drop-shadow-md ${className}`}>
             <div className="flex justify-between">
