@@ -18,11 +18,11 @@ function CardLink ({ children, link }) {
 function Card ({ children, className = "", link, linkText, label, placeholder }) {
     return (
         <div className={`bg-lightless dark:bg-darkless p-5 rounded-2xl drop-shadow-md ${className}`}>
-            <div className="flex justify-between">
+            { (placeholder || label || link) && <div className="flex justify-between items-center h-full">
                 <CardPlaceholder placeholder={placeholder} />
                 <CardLabel label={label} />
                 <CardLink link={link}>{linkText}</CardLink>
-            </div>
+            </div> }
             <div>
                 {children}
             </div>
