@@ -45,7 +45,7 @@ export default function Home () {
           <Layout>
             <div className="py-32 grid grid-cols-1 md:grid-cols-12 gap-4">
               <div className='order-2 md:col-span-6 md:order-1'>
-                <Card className='!bg-primary-500 text-dark flex justify-center items-center text-center py-4'>
+                <Card className='!bg-primary-500/[0.85] text-dark flex justify-center items-center text-center py-4'>
                   <p className='text-3xl font-bold'>Frontend developer</p>
                   <p className='text-xl mt-1 xl:mt-0'>Tech lead</p>
                 </Card>
@@ -53,11 +53,11 @@ export default function Home () {
                   <h1 className='text-2xl md:text-3xl md:leading-tight xl:text-5xl xl:leading-[3.3rem] font-semibold'>Skilled developer crafting intuitive web experiences with a keen eye for design. </h1>
                 </Card>
                 <div className='grid grid-cols-2 gap-4 mt-4'>
-                  <Card className='!bg-secondary-700 text-light flex justify-center items-center text-center py-8'>
+                  <Card className='!bg-secondary-700/75 text-light flex justify-center items-center text-center py-8'>
                     <p className='text-5xl font-bold'>2+</p>
                     <p className='text-xl'>Years exp.</p>
                   </Card>
-                  <Card className='!bg-tertiary-500 text-light flex justify-center items-center text-center py-8'>
+                  <Card className='!bg-tertiary-500/75 text-light flex justify-center items-center text-center py-8'>
                     <p className='text-5xl font-bold'>8+</p>
                     <p className='text-xl'>Projects</p>
                   </Card>
