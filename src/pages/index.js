@@ -45,17 +45,17 @@ export default function Home () {
           <Layout>
             <div className="py-32 grid grid-cols-1 md:grid-cols-12 gap-4">
               <div className='order-2 md:col-span-6 md:order-1'>
-                <Card className='py-7 px-6'>
-                  <h1 className='text-2xl md:text-5xl leading-[3.3rem] font-semibold'>Skilled developer crafting intuitive web experiences with a keen eye for design. </h1>
+                <Card className='!bg-primary-500 text-dark flex justify-center items-center text-center py-4'>
+                  <p className='text-3xl font-bold'>Frontend developer</p>
+                  <p className='text-xl mt-1 xl:mt-0'>Tech lead</p>
                 </Card>
-                <div className='grid grid-cols-3 gap-4 mt-4'>
+                <Card className='py-7 px-6 mt-4'>
+                  <h1 className='text-2xl md:text-3xl md:leading-tight xl:text-5xl xl:leading-[3.3rem] font-semibold'>Skilled developer crafting intuitive web experiences with a keen eye for design. </h1>
+                </Card>
+                <div className='grid grid-cols-2 gap-4 mt-4'>
                   <Card className='!bg-secondary-700 text-light flex justify-center items-center text-center py-8'>
                     <p className='text-5xl font-bold'>2+</p>
                     <p className='text-xl'>Years exp.</p>
-                  </Card>
-                  <Card className='!bg-primary-500 text-dark flex justify-center items-center text-center py-8'>
-                    <p className='text-3xl font-bold'>Frontend</p>
-                    <p className='text-xl mt-2'>Tech lead</p>
                   </Card>
                   <Card className='!bg-tertiary-500 text-light flex justify-center items-center text-center py-8'>
                     <p className='text-5xl font-bold'>8+</p>
@@ -64,10 +64,15 @@ export default function Home () {
                 </div>
               </div>
               <div className='order-1 md:col-span-6'>
-                <div className='grid grid-cols-2 order-2 md:order-1 gap-4'>
-                  <Card placeholder='Name' label='Kevin Castillo' />
-                  <Card>
-                    <div className='flex justify-between items-center'>
+                <div className='grid grid-cols-2 order-2 lg:order-1 gap-4'>
+                  <Card className='col-span-2 lg:col-span-1'>
+                    <div className='d-flex flex-col lg:flex-row'>
+                      <p className='text-xl text-gray-600 dark:text-gray-500'>Name:</p>
+                      <p className='text-2xl font-bold'>Kevin Castillo</p>
+                    </div>
+                  </Card>
+                  <Card className='col-span-2 lg:col-span-1 px-3'>
+                    <div className='flex justify-around items-center'>
                       <Link href="/" className="text-darkless">
                         <div
                           className='rounded-full bg-primary-500 p-2 flex justify-center items-center'
@@ -107,7 +112,7 @@ export default function Home () {
                     </div>
                   </Card>
                 </div>
-                <div className='avatar relative w-full h-full order-1 md:order-2 mt-4'>
+                <div className='avatar relative w-full h-full order-1 lg:order-2 mt-4'>
                   <div className="w-[85%] ease-in-out duration-300 absolute left-[50%] top-[-1rem] translate-x-[-50%]">
                     <svg className='animate-[spin_60s_linear_infinite]' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 288 288">
                       <linearGradient id="PSgrad_0" x1="70.711%" x2="0%" y1="70.711%" y2="0%">
