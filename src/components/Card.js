@@ -1,5 +1,4 @@
 import {customLink as Link} from './Link';
-import React from 'react'
 
 function CardPlaceholder ({ placeholder }) {
     return placeholder ? <p className='text-lg text-gray-600 dark:text-gray-500'>{placeholder}:</p> : null;
