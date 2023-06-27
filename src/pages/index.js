@@ -11,9 +11,7 @@ import {
   PiInstagramLogoBold,
   PiInstagramLogoFill,
   PiTwitterLogoBold,
-  PiTwitterLogoFill,
-  PiEnvelopeSimpleBold,
-  PiEnvelopeSimpleFill
+  PiTwitterLogoFill
 } from "react-icons/pi";
 import { useState } from 'react'
 import Link from 'next/link'
