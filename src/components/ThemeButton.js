@@ -1,17 +1,37 @@
 "use client"
 import React from 'react'
 import { useTheme } from "next-themes";
+import {
+    PiSunDimFill,
+    PiSunFill,
+    PiMoonFill,
+    PiMoonStarsFill,
+} from "react-icons/pi";
+import { useState } from 'react'
 
-
-const ThemeButton = () => {
+const ThemeButton = (props) => {
     const { systemTheme, theme, setTheme } = useTheme();
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
+    const [hovered, setHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        setHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setHovered(false);
+    };
+
     return (
         <button
+            className={`flex items-center justify-start text-left transition-all duration-100 text-secondary-400 dark:text-primary-100 hover:text-secondary-700 dark:hover:text-primary-500 ${props.isExpanded || 'w-0 lg:w-auto'}`}
             onClick={() => theme == "dark" ? setTheme('light') : setTheme("dark")}
-            className='bg-gray-800 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 px-8 py-2 text-2xl md:text-4xl rounded-lg'>
-            Toggle Mode
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            {theme == "dark" ? (hovered ? <PiSunFill size="2rem" /> : <PiSunDimFill size="2rem" />) : (hovered ? <PiMoonStarsFill size="2rem" /> : <PiMoonFill size="2rem" />)}
+            <span className={`text-md ${props.isExpanded ? 'ml-2' : 'hidden'}`}>{theme == "dark" ? "Light mode" : "Dark mode"}</span>
         </button>
     )
 }
