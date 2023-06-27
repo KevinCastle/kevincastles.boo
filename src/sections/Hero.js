@@ -29,7 +29,7 @@ const Hero = () => {
   return (
       <section id="hero" className="w-full">
           <Layout>
-              <div className="py-32 grid grid-cols-1 md:grid-cols-12 gap-4">
+              <div className="py-20 lg:py-32 grid grid-cols-1 md:grid-cols-12 gap-4">
                   <div className='order-2 md:col-span-6 md:order-1'>
                       <Card className='!bg-primary-500/[0.85] text-dark flex justify-center items-center text-center py-4'>
                           <p className='text-3xl font-bold'>Frontend developer</p>
