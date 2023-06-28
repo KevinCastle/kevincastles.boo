@@ -28,28 +28,28 @@ const About = () => {
                                 That way, I get to combine my passion for coding with my desire to share knowledge with fellow developers.</p>
                         </Card>
                         <Card className='mt-4'>
-                            <p>Few Technologies I&apos;ve been working with:</p>
+                            <p className='text-lg'>Few Technologies I&apos;ve been working with:</p>
                             <div className='flex justify-around items-center mt-3'>
                                 <Tooltip message={"JavaScript"}>
-                                    <SiJavascript size={"2rem"} className='hover:text-primary-500' />
+                                    <SiJavascript size={"2rem"} className='hover:text-primary-500  cursor-s-resize' />
                                 </Tooltip>
                                 <Tooltip message={"React"}>
-                                    <SiReact size={"2rem"} className='hover:text-blue-300' />
+                                    <SiReact size={"2rem"} className='hover:text-blue-300  cursor-s-resize' />
                                 </Tooltip>
                                 <Tooltip message={"Vue.js"}>
-                                    <SiVuedotjs size={"2rem"} className='hover:text-green-500' />
+                                    <SiVuedotjs size={"2rem"} className='hover:text-green-500  cursor-s-resize' />
                                 </Tooltip>
                                 <Tooltip message={"Next.js"}>
-                                    <SiNextdotjs size={"2rem"} className='hover:text-gray-800' />
+                                    <SiNextdotjs size={"2rem"} className='hover:text-gray-800  cursor-s-resize' />
                                 </Tooltip>
                                 <Tooltip message={"Tailwindcss"}>
-                                    <SiTailwindcss size={"2rem"} className='hover:text-blue-400' />
+                                    <SiTailwindcss size={"2rem"} className='hover:text-blue-400  cursor-s-resize' />
                                 </Tooltip>
                             </div>
                         </Card>
                     </div>
                     <div className='md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4'>
-                        <Card className='!bg-secondary-700/50 md:max-lg:px-0'>
+                        <Card className='!bg-secondary-700/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
                                 <PiBriefcase size="3rem" />
                                 <div className='ml-2'>
@@ -58,7 +58,7 @@ const About = () => {
                                 </div>
                             </div>
                         </Card>
-                        <Card className='!bg-primary-500/50 md:max-lg:px-0'>
+                        <Card className='!bg-primary-500/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
                                 <SiNintendo3Ds size="3rem" />
                                 <div className='ml-2'>
@@ -67,7 +67,7 @@ const About = () => {
                                 </div>
                             </div>
                         </Card>
-                        <Card className='!bg-tertiary-500/50 md:max-lg:px-0'>
+                        <Card className='!bg-tertiary-300/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
                                 <PiCode size="3rem" />
                                 <div className='ml-2'>
@@ -76,7 +76,7 @@ const About = () => {
                                 </div>
                             </div>
                         </Card>
-                        <Card className='!bg-gray-500/50 md:max-lg:px-0'>
+                        <Card className='!bg-gray-300/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
                                 <PiPushPinSimple size="3rem" />
                                 <div className='ml-2'>
