@@ -21,7 +21,7 @@ import ThemeButton from './ThemeButton';
 
 const routes = [
     { name: 'Home', href: '/', icon: PiHouseBold, iconActive: PiHouseFill },
-    { name: 'About', href: '/about', icon: PiUserCircleBold, iconActive: PiUserCircleFill },
+    { name: 'About', href: '/#about', icon: PiUserCircleBold, iconActive: PiUserCircleFill },
     { name: 'Projects', href: '/projects', icon: PiDesktopBold, iconActive: PiDesktopFill },
     { name: 'Articles', href: '/articles', icon: PiPencilCircleBold, iconActive: PiPencilCircleFill },
 ]
