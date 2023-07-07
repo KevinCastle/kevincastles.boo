@@ -45,7 +45,7 @@ const NavBar = () => {
 
     return (
         <>
-            <div onClick={toggleExpanded} className={`h-screen w-full absolute top-0 left-0 z-10 ${isExpanded ? 'bg-dark/75' : 'pointer-events-none'} transition duration-200`}/>
+            <div onClick={toggleExpanded} className={`h-screen w-full fixed top-0 left-0 z-10 ${isExpanded ? 'bg-dark/75' : 'pointer-events-none'} transition duration-200`}/>
             <button
                 className={`fixed block lg:hidden top-4 z-20 ${isExpanded ? '-left-20' : 'left-4'} transition duration-200`}
                 onClick={toggleExpanded}
