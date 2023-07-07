@@ -6,7 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  @apply dark:bg-dark bg-light;
+  /* @apply dark:bg-circle-dark bg-circle-light; */
 }
 
 * {
@@ -22,4 +22,20 @@ code {
 
 .avatar__mask {
   clip-path: circle(50% at 50% 50%);
+}
+
+.bg-circles::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+  background-image: url("../../public/backgrounds/circles.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
