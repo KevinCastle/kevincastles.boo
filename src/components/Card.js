@@ -16,7 +16,7 @@ function CardLink ({ children, link }) {
 
 function Card ({ children, className = "", link, linkText, label, placeholder }) {
     return (
-        <div className={`bg-lightless/30 dark:bg-darkless/50  backdrop-blur-sm p-5 rounded-2xl drop-shadow-md hover:-translate-y-1 transition duration-300 ${className}`}>
+        <div className={`bg-lightless/30 dark:bg-darkless/50 border border-solid border-light/[0.18] dark:border-dark/[0.18] backdrop-blur-sm p-5 rounded-2xl drop-shadow-md hover:-translate-y-1 transition duration-300 ${className}`}>
             { (placeholder || label || link) && <div className="flex justify-between items-center h-full">
                 <CardPlaceholder placeholder={placeholder} />
                 <CardLabel label={label} />
