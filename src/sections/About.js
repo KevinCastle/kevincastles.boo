@@ -7,9 +7,9 @@ import { SiNintendo3Ds, SiJavascript, SiReact, SiVuedotjs, SiNextdotjs, SiTailwi
 
 const About = () => {
     return (
-        <section id="about" className="w-full">
+        <section id="about" className="w-full pt-10">
             <Layout>
-                <Card className='mb-4'>
+                <Card className='!bg-secondary-500/50 mb-4'>
                     <div className='flex items-center'>
                         <PiUserCircleFill size="2rem" />
                         <h2 className='text-3xl font-bold ml-4'>About me</h2>
