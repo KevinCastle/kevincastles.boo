@@ -38,15 +38,15 @@ const Hero = () => {
                         <div className='grid grid-cols-3 gap-4 mt-4'>
                             <Card className='!bg-secondary-700/75 text-light flex justify-center items-center text-center py-6'>
                                 <p className='text-3xl xl:text-5xl font-bold'>2+</p>
-                                <p className='text-sm xl:text-xl break-words'>Years exp.</p>
+                                <p className='text-sm xl:text-xl break-words xl:break-normal'>Years exp.</p>
                             </Card>
                             <Card className='!bg-tertiary-500/75 text-light flex justify-center items-center text-center py-6'>
                                 <p className='text-3xl xl:text-5xl font-bold'>8+</p>
-                                <p className='text-sm xl:text-xl '>Projects</p>
+                                <p className='text-sm xl:text-xl'>Projects</p>
                             </Card>
                             <Card className='!bg-accent/50 text-light flex justify-center items-center text-center py-6'>
                                 <p className='text-3xl xl:text-5xl font-bold'>1</p>
-                                <p className='text-sm xl:text-xl break-words'>Achievement</p>
+                                <p className='text-sm xl:text-xl break-words xl:break-normal'>Achievement</p>
                             </Card>
                         </div>
                         <Card className='col-span-2 lg:col-span-1 mt-4'>
