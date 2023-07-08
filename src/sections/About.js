@@ -19,13 +19,13 @@ const About = () => {
                 <div className='grid md:grid-cols-3 gap-4'>
                     <div className='md:col-span-2'>
                         <Card>
-                            <p className='leading-relaxed mt-2'>Hi, this is Kevin, a self-taught web developer based in Santiago, Chile. I&apos;m truly passionate about coding and bringing things to life on the internet
+                            <p className='leading-relaxed mt-2'>Hi, this is Kevin, a <span className='font-semibold'>self-taught web developer</span> based in Santiago, Chile. I&apos;m truly passionate about <span className='font-semibold'>coding</span> and bringing things to life on the internet
                                 (even if that means occasionally breaking them). </p>
-                            <p className='leading-relaxed mt-2'>My web development journey began in 2015 when I met a JavaScript enthusiast friend who
+                            <p className='leading-relaxed mt-2'>My <span className='font-semibold'>web development journey</span> began in 2015 when I met a JavaScript enthusiast friend who
                                 challenged my perception of the language. I used to be solely focused on Python and didn&apos;t consider JS as a &quot;real&quot; programming language.
                                 However, that encounter changed everything when he invited me to a <Link href={"/"} className={"font-semibold"}>freecodecamp</Link> meeting. Since that day, I&apos;ve been head over heels in love with web development.</p>
-                            <p className='leading-relaxed mt-2'>Over time, had the privilege of working as a freelancer and eventually found my way to <Link href={""} className={"font-semibold"}>Modyo</Link>, where I currently enjoy my day-to-day work. Currently deeply interested in the role of a developer advocate.
-                                That way, I get to combine my passion for coding with my desire to share knowledge with fellow developers.</p>
+                            <p className='leading-relaxed mt-2'>Over time, had the privilege of working as a freelancer and eventually found my way to <Link href={""} className={"font-semibold"}>Modyo</Link>, where I currently enjoy my day-to-day work. Currently deeply interested in the role of a <span className='font-semibold'>developer advocate</span>.
+                                That way, I get to combine my passion for <span className='font-semibold'>coding</span> with my desire to share knowledge with fellow developers.</p>
                         </Card>
                         <Card className='mt-4'>
                             <p className='text-lg'>Few Technologies I&apos;ve been working with:</p>
