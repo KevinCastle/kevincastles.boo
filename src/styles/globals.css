@@ -39,3 +39,25 @@ code {
   background-attachment: fixed;
   background-size: cover;
 }
+
+.hero__social-network {
+  @apply rounded-full;
+  @apply bg-transparent;
+  @apply hover:bg-yellow-500;
+  @apply border-2 border-solid;
+  @apply border-light;
+  @apply text-light;
+  @apply hover:shadow-md;
+  @apply hover:shadow-primary-50/50;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply p-2;
+  @apply ease-in-out;
+  @apply duration-200;
+  @apply transition;
+  @apply w-[70px];
+  @apply h-[70px];
+  @apply xl:w-[58px];
+  @apply xl:h-[58px];
+}
