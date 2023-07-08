@@ -34,7 +34,7 @@ const ThemeButton = ({ isExpanded }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-                {theme == "dark" ? (hovered ? <PiSunFill size="2rem" /> : <PiSunDimFill size="2rem" />) : (hovered ? <PiMoonStarsFill size="2rem" /> : <PiMoonFill size="2rem" />)} 
+                {currentTheme == "dark" ? (hovered ? <PiSunFill size="2rem" /> : <PiSunDimFill size="2rem" />) : (hovered ? <PiMoonStarsFill size="2rem" /> : <PiMoonFill size="2rem" />)} 
                 <span className={`text-md ${isExpanded ? 'ml-2' : 'hidden'}`}>{currentTheme == "dark" ? "Light mode" : "Dark mode"}</span>
         </button>
         </>
