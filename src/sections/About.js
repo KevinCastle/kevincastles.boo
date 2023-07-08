@@ -2,7 +2,7 @@ import Card from '@/components/Card'
 import Layout from '@/components/Layout'
 import { customLink as Link } from '@/components/Link'
 import Tooltip from '@/components/Tooltip'
-import { PiUserCircleLight, PiBriefcaseLight, PiCodeLight, PiPushPinSimpleLight } from 'react-icons/pi'
+import { PiUserCircleLight, PiCodeLight, PiBooksLight, PiEyeglassesLight } from 'react-icons/pi'
 import { SiNintendo3Ds, SiJavascript, SiReact, SiVuedotjs, SiNextdotjs, SiTailwindcss } from 'react-icons/si'
 
 const About = () => {
@@ -48,6 +48,7 @@ const About = () => {
                             </div>
                         </Card>
                     </div>
+                    { /* TODO: Podría hacer una pagina para cada uno de estos contenidos y que tenga un listado de lo ultimo jugado, leido, etc. */ }
                     <div className='md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4'>
                         <Card className='!bg-primary-500/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
@@ -69,19 +70,19 @@ const About = () => {
                         </Card>
                         <Card className='!bg-gray-300/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
-                                <PiPushPinSimpleLight size="3rem" />
+                                <PiBooksLight size="3rem" />
                                 <div className='ml-2'>
-                                    <p className='font-semibold'>Currently Living</p>
-                                    <span>in <Link href="/">Chile</Link></span>
+                                    <p className='font-semibold'>Currently Reading</p>
+                                    <Link href="/">The Stormlight Archive</Link>
                                 </div>
                             </div>
                         </Card>
                         <Card className='!bg-secondary-700/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
-                                <PiBriefcaseLight size="3rem" />
+                                <PiEyeglassesLight size="3rem" />
                                 <div className='ml-2'>
-                                    <p className='font-semibold'>Currently working</p>
-                                    <span>at <Link href="/">Modyo</Link></span>
+                                    <p className='font-semibold'>Currently Learning</p>
+                                    <Link href="/">Hiragana</Link>
                                 </div>
                             </div>
                         </Card>
