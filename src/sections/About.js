@@ -2,7 +2,7 @@ import Card from '@/components/Card'
 import Layout from '@/components/Layout'
 import { customLink as Link } from '@/components/Link'
 import Tooltip from '@/components/Tooltip'
-import { PiUserCircleFill, PiBriefcase, PiCode, PiPushPinSimple } from 'react-icons/pi'
+import { PiUserCircleLight, PiBriefcaseLight, PiCodeLight, PiPushPinSimpleLight } from 'react-icons/pi'
 import { SiNintendo3Ds, SiJavascript, SiReact, SiVuedotjs, SiNextdotjs, SiTailwindcss } from 'react-icons/si'
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
             <Layout>
                 <Card className='!bg-secondary-500/50 mb-4'>
                     <div className='flex items-center'>
-                        <PiUserCircleFill size="2rem" />
+                        <PiUserCircleLight size="2rem" />
                         <h2 className='text-3xl font-bold ml-4'>About me</h2>
                         <Link href={""} className={"text-xl font-semibold ml-auto"}>Resume</Link>
                     </div>
@@ -49,15 +49,6 @@ const About = () => {
                         </Card>
                     </div>
                     <div className='md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4'>
-                        <Card className='!bg-secondary-700/75 md:max-lg:px-0'>
-                            <div className='flex items-center justify-around'>
-                                <PiBriefcase size="3rem" />
-                                <div className='ml-2'>
-                                    <p className='font-semibold'>Currently working</p>
-                                    <span>at <Link href="/">Modyo</Link></span>
-                                </div>
-                            </div>
-                        </Card>
                         <Card className='!bg-primary-500/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
                                 <SiNintendo3Ds size="3rem" />
@@ -69,7 +60,7 @@ const About = () => {
                         </Card>
                         <Card className='!bg-tertiary-300/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
-                                <PiCode size="3rem" />
+                                <PiCodeLight size="3rem" />
                                 <div className='ml-2'>
                                     <p className='font-semibold'>Currently Coding</p>
                                     <Link href="/">This page</Link>
@@ -78,10 +69,19 @@ const About = () => {
                         </Card>
                         <Card className='!bg-gray-300/75 md:max-lg:px-0'>
                             <div className='flex items-center justify-around'>
-                                <PiPushPinSimple size="3rem" />
+                                <PiPushPinSimpleLight size="3rem" />
                                 <div className='ml-2'>
                                     <p className='font-semibold'>Currently Living</p>
                                     <span>in <Link href="/">Chile</Link></span>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card className='!bg-secondary-700/75 md:max-lg:px-0'>
+                            <div className='flex items-center justify-around'>
+                                <PiBriefcaseLight size="3rem" />
+                                <div className='ml-2'>
+                                    <p className='font-semibold'>Currently working</p>
+                                    <span>at <Link href="/">Modyo</Link></span>
                                 </div>
                             </div>
                         </Card>

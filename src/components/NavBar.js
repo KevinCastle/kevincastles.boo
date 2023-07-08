@@ -1,14 +1,10 @@
 import { useState } from 'react';
 import {
-    PiHouseBold,
-    PiHouseFill,
-    PiUserCircleBold,
-    PiUserCircleFill,
-    PiDesktopBold,
-    PiDesktopFill,
-    PiPencilCircleBold,
-    PiPencilCircleFill,
-    PiEnvelopeSimpleBold,
+    PiHouseLight,
+    PiUserCircleLight,
+    PiDesktopLight,
+    PiPencilCircleLight,
+    PiEnvelopeSimpleLight,
     PiListBold
 } from "react-icons/pi"
 import {
@@ -20,10 +16,10 @@ import { customLink as Link } from './Link';
 import ThemeButton from './ThemeButton';
 
 const routes = [
-    { name: 'Home', href: '/', icon: PiHouseBold, iconActive: PiHouseFill },
-    { name: 'About', href: '/#about', icon: PiUserCircleBold, iconActive: PiUserCircleFill },
-    { name: 'Projects', href: '/projects', icon: PiDesktopBold, iconActive: PiDesktopFill },
-    { name: 'Articles', href: '/articles', icon: PiPencilCircleBold, iconActive: PiPencilCircleFill },
+    { name: 'Home', href: '/', icon: PiHouseLight },
+    { name: 'About', href: '/#about', icon: PiUserCircleLight },
+    { name: 'Projects', href: '/projects', icon: PiDesktopLight },
+    { name: 'Articles', href: '/articles', icon: PiPencilCircleLight },
 ]
 
 const NavBar = () => {
@@ -73,7 +69,7 @@ const NavBar = () => {
                             key={route.name}
                             onClick={toggleExpanded}
                         >
-                            {isActive ? <route.iconActive size="2rem" /> : <route.icon size="2rem" />}
+                            <route.icon size="2rem" />
                             <span className={`text-lg ${isExpanded ? 'ml-2' : 'hidden'}`}>{route.name}</span>
                         </Link>
                     )
@@ -84,7 +80,7 @@ const NavBar = () => {
                     href={"mailto:kevinacastles@gmail.com"}
                     target={"_blank"}
                     onClick={toggleExpanded}>
-                    <PiEnvelopeSimpleBold size="2rem" />
+                    <PiEnvelopeSimpleLight size="2rem" />
                     <span className={`text-lg ${isExpanded ? 'ml-2' : 'hidden'}`}>Contact</span>
                 </Link>
                 <div className='my-2 px-4 h-12'>
