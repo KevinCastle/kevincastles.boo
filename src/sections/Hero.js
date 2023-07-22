@@ -3,16 +3,14 @@ import Image from 'next/image'
 import profilePic from '../../public/images/profile/avatar.png'
 import Card from '@/components/Card'
 import {
-    PiGithubLogoBold,
-    PiGithubLogoLight,
-    PiLinkedinLogoBold,
-    PiLinkedinLogoLight,
-    PiInstagramLogoBold,
-    PiInstagramLogoLight,
-    PiTwitterLogoBold,
-    PiTwitterLogoLight,
-} from "react-icons/pi";
+    PiEnvelopeSimpleFill,
+    PiGithubLogoFill,
+    PiLinkedinLogoFill,
+    PiInstagramLogoFill,
+    PiTiktokLogoFill
+} from "react-icons/pi"
 import { useState } from 'react'
+import Map from '@/components/Map'
 import Link from 'next/link'
 
 const Hero = () => {
@@ -30,35 +28,47 @@ const Hero = () => {
         <section id="hero" className="w-full">
             <Layout>
                 <div className="pt-20 lg:pt-32 grid grid-cols-1 md:grid-cols-12 gap-4">
-                    <div className='order-2 md:col-span-6 md:order-1 mt-auto xl:mt-0'>
+                    <div className='order-2 md:col-span-6 lg:col-span-5 md:order-1 mt-auto xl:mt-0'>
                         <Card className='!bg-primary-500/[0.85] text-dark flex justify-center items-center text-center py-4'>
-                            <p className='text-4xl xl:text-5xl font-bold'>Kevin Castillo</p>
-                            <p className='text-xl mt-1 xl:mt-3'>Frontend developer</p>
+                            <div className='flex flex-col justify-center items-center'>
+                                <p className='text-4xl xl:text-5xl font-bold'>Kevin Castillo</p>
+                                <p className='text-xl mt-1 xl:mt-3'>Frontend developer</p>
+                            </div>
                         </Card>
                         <div className='grid grid-cols-3 gap-4 mt-4'>
-                            <Card className='!bg-secondary-700/75 text-light flex justify-center items-center text-center py-6'>
-                                <p className='text-3xl xl:text-5xl font-bold'>2+</p>
-                                <p className='text-sm xl:text-xl break-words xl:break-normal'>Years exp.</p>
-                            </Card>
-                            <Card className='!bg-tertiary-500/75 text-light flex justify-center items-center text-center py-6'>
-                                <p className='text-3xl xl:text-5xl font-bold'>8+</p>
-                                <p className='text-sm xl:text-xl'>Projects</p>
-                            </Card>
                             <Card className='!bg-accent/50 text-light flex justify-center items-center text-center py-6'>
-                                <p className='text-3xl xl:text-5xl font-bold'>1</p>
-                                <p className='text-sm xl:text-xl break-words xl:break-normal'>Achievement</p>
+                                <div>
+                                    <div className='flex flex-col justify-center items-center'>
+                                        <p className='text-3xl xl:text-5xl font-bold'>2+</p>
+                                        <p className='text-sm xl:text-lg break-words xl:break-normal'>Years exp.</p>
+                                    </div>
+                                </div>
                             </Card>
+                            <Card className='!bg-pink-500/50 text-light flex justify-center items-center text-center py-6'>
+                                <div className='flex flex-col justify-center items-center'>
+                                    <p className='text-3xl xl:text-5xl font-bold'>8+</p>
+                                    <p className='text-sm xl:text-lg'>Projects</p>
+                                </div>
+                            </Card>
+                            <Link href='mailto:me@kevcastles.boo' target='_blank'>
+                                <Card link={true} className='!bg-tertiary-300/50 text-light flex flex-col justify-center items-center text-center py-6'>
+                                    <PiEnvelopeSimpleFill className='w-[50%] h-auto mx-auto' />
+                                    <p>Contact me</p>
+                                </Card>
+                            </Link>
                         </div>
-                        <Card className='col-span-2 lg:col-span-1 mt-4'>
+                        <Card className='col-span-2 lg:col-span-1 mt-4 !bg-gray-600/50'>
                             <div className='d-flex flex-col lg:flex-row'>
-                                {/* <p className='text-xl text-gray-600 dark:text-gray-500'>Also:</p> */}
-                                <p className='text-xl xl:text-2xl'>I am a <span className='font-semibold'>developer</span> who aims to grow and transition into a <span className='font-semibold'>Developer Advocate</span> role, actively working towards becoming an <span className='font-semibold'>esteemed professional</span> in the field.</p>
+                                <p className='text-xl xl:text-2xl'>
+                                    <span className='font-semibold'>Geek, developer, writer</span> always hungry for growth. Passionate about <span className='font-semibold'>code, community,</span> and embracing the <span className='font-semibold'>joy of tech.</span> Building and sharing great solutions. 🚀
+                                </p>
                             </div>
                         </Card>
                     </div>
-                    <div className='order-1 md:order-2 md:col-span-6 grid grid-cols-1 xl:grid-cols-6'>
-                        <div className='avatar col-span-5 relative flex justify-center align-center w-full h-full'>
-                            <div className="w-[100%] xl:w-[85%] ease-in-out duration-300 absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]">
+                    <div className='order-1 md:order-2 md:col-span-6 lg:col-span-4 grid grid-cols-1'>
+                        <Card className='col-span-4 md:!p-0 !bg-accent/20'>
+                            <div className='avatar relative flex justify-center align-center w-full h-full'>
+                            <div className="w-[90%] md:w-full ease-in-out duration-300 absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]">
                                 <svg className='animate-[spin_60s_linear_infinite]' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 288 288">
                                     <linearGradient id="PSgrad_0" x1="70.711%" x2="0%" y1="70.711%" y2="0%">
                                         <stop offset="0%" stopColor="#7f2f8e" stopOpacity="1" />
@@ -70,96 +80,40 @@ const Hero = () => {
                                 </svg>
                             </div>
                             <div className='flex justify-center items-center'>
-                                <div className="avatar__mask w-[80%] xl:w-[70%] pointer-events-none">
+                                <div className="avatar__mask w-[75%] md:w-[80%] pointer-events-none">
                                     <Image src={profilePic} priority={true} alt="Kevin Castillo" className='object-cover' />
                                 </div>
                             </div>
                         </div>
-                        <div className='col-span-1 flex justify-center items-end xl:items-center mt-4 md:mt-0 lg:mt-4 xl:mt-0'>
-                            <Card className='px-4 py-3 xl:py-5 w-full lg:w-auto'>
-                                <div className='flex flex-row xl:flex-col gap-4 justify-around items-center'>
-                                    <Link href="/" className="text-darkless">
-                                        <div
-                                            className='hero__social-network'
-                                            onMouseEnter={() => handleMouseEnter('github')}
-                                            onMouseLeave={handleMouseLeave}
-                                        >
-                                            {hoveredIcon === 'github' ? <PiGithubLogoBold size="100%" className='w-[60%] xl:w-full' /> : <PiGithubLogoLight size="100%" className='w-[60%] xl:w-full' />}
-                                        </div>
-                                    </Link>
-                                    <Link href="/" className="text-darkless">
-                                        <div
-                                            className='hero__social-network'
-                                            onMouseEnter={() => handleMouseEnter('linkedin')}
-                                            onMouseLeave={handleMouseLeave}
-                                        >
-                                            {hoveredIcon === 'linkedin' ? <PiLinkedinLogoBold size="100%" className='w-[60%] xl:w-full' /> : <PiLinkedinLogoLight size="100%" className='w-[60%] xl:w-full' />}
-                                        </div>
-                                    </Link>
-                                    <Link href="/" className="text-darkless">
-                                        <div
-                                            className='hero__social-network'
-                                            onMouseEnter={() => handleMouseEnter('instagram')}
-                                            onMouseLeave={handleMouseLeave}
-                                        >
-                                            {hoveredIcon === 'instagram' ? <PiInstagramLogoBold size="100%" className='w-[60%] xl:w-full' /> : <PiInstagramLogoLight size="100%" className='w-[60%] xl:w-full' />}
-                                        </div>
-                                    </Link>
-                                    <Link href="/" className="text-darkless">
-                                        <div
-                                            className='hero__social-network'
-                                            onMouseEnter={() => handleMouseEnter('twitter')}
-                                            onMouseLeave={handleMouseLeave}
-                                        >
-                                            {hoveredIcon === 'twitter' ? <PiTwitterLogoBold size="100%" className='w-[60%] xl:w-full' /> : <PiTwitterLogoLight size="100%" className='w-[60%] xl:w-full' />}
-                                        </div>
-                                    </Link>
-                                </div>
+                        </Card>
+                    </div>
+                    <div className='order-3 md:col-span-12 lg:col-span-3 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-4'>
+                        <Card className='!p-0'>
+                            <Map className="w-full h-full rounded-2xl" />
+                        </Card>
+                        <div className='grid grid-cols-2 gap-4'>
+                            <Link href='https://github.com/KevinCastle' target='_blank' className='w-full h-full'>
+                            <Card link={true} className='flex justify-center items-center text-center !bg-gray-700/50 h-full w-full'>
+                                <PiGithubLogoFill size="3rem" aria-label="Github" role="img" className='mx-auto' />
                             </Card>
+                            </Link>
+                            <Link href='https://www.linkedin.com/in/kevin-castillo11/' target='_blank' className='w-full h-full'>
+                                <Card link={true} className='flex justify-center items-center text-center !bg-[#0A66C2]/50 h-full w-full'>
+                                <PiLinkedinLogoFill size="3rem" aria-label="Linkedin" role="img" className='mx-auto' />
+                            </Card>
+                            </Link>
+                            <Link href='https://www.instagram.com/kevcastles.dev/' target='_blank' className='w-full h-full'>
+                                <Card link={true} className='flex justify-center items-center text-center !bg-[#d62976]/50 h-full w-full'>
+                                <PiInstagramLogoFill size="3rem" aria-label="Instagram" role="img" className='mx-auto' />
+                            </Card>
+                            </Link>
+                            <Link href='https://tiktok.com/@kevcastles.dev' target='_blank' className='w-full h-full'>
+                                <Card link={true} className='flex justify-center items-center text-center !bg-[#00F2EA]/50 h-full w-full'>
+                                <PiTiktokLogoFill size="3rem" aria-label="Tiktok" role="img" className='mx-auto' />
+                            </Card>
+                            </Link>
                         </div>
                     </div>
-                    {/* <div className='order-3 md:col-span-1 flex justify-center items-center'>
-                        <Card className='px-4'>
-                            <div className='flex flex-row xl:flex-col gap-4 justify-around items-center'>
-                                <Link href="/" className="text-darkless">
-                                    <div
-                                        className='hero__social-network'
-                                        onMouseEnter={() => handleMouseEnter('github')}
-                                        onMouseLeave={handleMouseLeave}
-                                    >
-                                        {hoveredIcon === 'github' ? <PiGithubLogoBold size="100%" /> : <PiGithubLogoLight size="100%" />}
-                                    </div>
-                                </Link>
-                                <Link href="/" className="text-darkless">
-                                    <div
-                                        className='hero__social-network'
-                                        onMouseEnter={() => handleMouseEnter('linkedin')}
-                                        onMouseLeave={handleMouseLeave}
-                                    >
-                                        {hoveredIcon === 'linkedin' ? <PiLinkedinLogoBold size="100%" /> : <PiLinkedinLogoLight size="100%" />}
-                                    </div>
-                                </Link>
-                                <Link href="/" className="text-darkless">
-                                    <div
-                                        className='hero__social-network'
-                                        onMouseEnter={() => handleMouseEnter('instagram')}
-                                        onMouseLeave={handleMouseLeave}
-                                    >
-                                        {hoveredIcon === 'instagram' ? <PiInstagramLogoBold size="100%" /> : <PiInstagramLogoLight size="100%" />}
-                                    </div>
-                                </Link>
-                                <Link href="/" className="text-darkless">
-                                    <div
-                                        className='hero__social-network'
-                                        onMouseEnter={() => handleMouseEnter('twitter')}
-                                        onMouseLeave={handleMouseLeave}
-                                    >
-                                        {hoveredIcon === 'twitter' ? <PiTwitterLogoBold size="100%" /> : <PiTwitterLogoLight size="100%" />}
-                                    </div>
-                                </Link>
-                            </div>
-                        </Card>
-                    </div> */}
                 </div>
             </Layout>
         </section>
