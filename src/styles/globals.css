@@ -34,7 +34,7 @@ code {
   width: 100%;
   height: auto;
   opacity: 0.4;
-  background-image: url("../../public/backgrounds/circles.svg");
+  background-image: url("../../public/images/backgrounds/circles.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
