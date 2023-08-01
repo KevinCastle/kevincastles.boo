@@ -26,48 +26,47 @@ const Hero = () => {
 
     return (
         <section id="hero" className="w-full">
-            <Layout>
-                <div className="pt-20 lg:pt-32 grid grid-cols-1 md:grid-cols-12 gap-4">
-                    <div className='order-2 md:col-span-6 lg:col-span-5 md:order-1 mt-auto xl:mt-0'>
-                        <Card className='!bg-primary-500/[0.85] text-dark flex justify-center items-center text-center py-4'>
-                            <div className='flex flex-col justify-center items-center'>
-                                <p className='text-4xl xl:text-5xl font-bold'>Kevin Castillo</p>
-                                <p className='text-xl mt-1 xl:mt-3'>Frontend developer</p>
-                            </div>
-                        </Card>
-                        <div className='grid grid-cols-3 gap-4 mt-4'>
-                            <Card className='!bg-accent/50 text-light flex justify-center items-center text-center py-6'>
-                                <div>
-                                    <div className='flex flex-col justify-center items-center'>
-                                        <p className='text-3xl xl:text-5xl font-bold'>2+</p>
-                                        <p className='text-sm xl:text-lg break-words xl:break-normal'>Years exp.</p>
-                                    </div>
-                                </div>
-                            </Card>
-                            <Card className='!bg-pink-500/50 text-light flex justify-center items-center text-center py-6'>
-                                <div className='flex flex-col justify-center items-center'>
-                                    <p className='text-3xl xl:text-5xl font-bold'>8+</p>
-                                    <p className='text-sm xl:text-lg'>Projects</p>
-                                </div>
-                            </Card>
-                            <Link href='mailto:me@kevcastles.boo' target='_blank' className='w-full h-full'>
-                                <Card link={true} className='!bg-tertiary-300/50 hover:!bg-tertiary-300/60 text-light flex flex-col justify-center items-center text-center py-6'>
-                                    <PiEnvelopeSimpleFill className='w-[50%] h-auto mx-auto' />
-                                    <p>Contact me</p>
-                                </Card>
-                            </Link>
+            <Layout className='pt-20 lg:pt-32 grid grid-cols-1 md:grid-cols-12 gap-4'>
+                <div className='order-2 md:col-span-6 lg:col-span-5 md:order-1 mt-auto xl:mt-0'>
+                    <Card className='!bg-primary-500/[0.85] text-dark flex justify-center items-center text-center py-4'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <p className='text-4xl xl:text-5xl font-bold'>Kevin Castillo</p>
+                            <p className='text-xl mt-1 xl:mt-3'>Frontend developer</p>
                         </div>
-                        <Card className='col-span-2 lg:col-span-1 mt-4 !bg-gray-600/50'>
-                            <div className='d-flex flex-col lg:flex-row'>
-                                <p className='text-xl xl:text-2xl'>
-                                    <span className='font-semibold'>Geek, developer, writer</span> always hungry for growth. Passionate about <span className='font-semibold'>code, community,</span> and embracing the <span className='font-semibold'>joy of tech.</span> Building and sharing great solutions. 🚀
-                                </p>
+                    </Card>
+                    <div className='grid grid-cols-3 gap-4 mt-4'>
+                        <Card className='!bg-accent/50 text-light flex justify-center items-center text-center py-6'>
+                            <div>
+                                <div className='flex flex-col justify-center items-center'>
+                                    <p className='text-3xl xl:text-5xl font-bold'>2+</p>
+                                    <p className='text-sm xl:text-lg break-words xl:break-normal'>Years exp.</p>
+                                </div>
                             </div>
                         </Card>
+                        <Card className='!bg-pink-500/50 text-light flex justify-center items-center text-center py-6'>
+                            <div className='flex flex-col justify-center items-center'>
+                                <p className='text-3xl xl:text-5xl font-bold'>8+</p>
+                                <p className='text-sm xl:text-lg'>Projects</p>
+                            </div>
+                        </Card>
+                        <Link href='mailto:me@kevcastles.boo' target='_blank' className='w-full h-full'>
+                            <Card link={true} className='!bg-tertiary-300/50 hover:!bg-tertiary-300/60 text-light flex flex-col justify-center items-center text-center py-6'>
+                                <PiEnvelopeSimpleFill className='w-[50%] h-auto mx-auto' />
+                                <p>Contact me</p>
+                            </Card>
+                        </Link>
                     </div>
-                    <div className='order-1 md:order-2 md:col-span-6 lg:col-span-4 grid grid-cols-1'>
-                        <Card className='col-span-4 md:!p-0 !bg-accent/20'>
-                            <div className='avatar relative flex justify-center align-center w-full h-full'>
+                    <Card className='col-span-2 lg:col-span-1 mt-4 !bg-gray-600/50'>
+                        <div className='d-flex flex-col lg:flex-row'>
+                            <p className='text-xl xl:text-2xl'>
+                                <span className='font-semibold'>Geek, developer, writer</span> always hungry for growth. Passionate about <span className='font-semibold'>code, community,</span> and embracing the <span className='font-semibold'>joy of tech.</span> Building and sharing great solutions. 🚀
+                            </p>
+                        </div>
+                    </Card>
+                </div>
+                <div className='order-1 md:order-2 md:col-span-6 lg:col-span-4 grid grid-cols-1'>
+                    <Card className='col-span-4 md:!p-0 !bg-accent/20'>
+                        <div className='avatar relative flex justify-center align-center w-full h-full'>
                             <div className="w-[90%] md:w-full ease-in-out duration-300 absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]">
                                 <svg className='animate-[spin_60s_linear_infinite]' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 288 288">
                                     <linearGradient id="PSgrad_0" x1="70.711%" x2="0%" y1="70.711%" y2="0%">
@@ -85,34 +84,33 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        </Card>
-                    </div>
-                    <div className='order-3 md:col-span-12 lg:col-span-3 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-4'>
-                        <Card className='!p-0'>
-                            <Map className="w-full h-full" />
-                        </Card>
-                        <div className='grid grid-cols-2 gap-4'>
-                            <Link href='https://github.com/KevinCastle' target='_blank' className='w-full h-full'>
-                                <Card link={true} className='flex justify-center items-center text-center !bg-gray-700/50 hover:!bg-gray-700/60 h-full w-full'>
+                    </Card>
+                </div>
+                <div className='order-3 md:col-span-12 lg:col-span-3 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-4'>
+                    <Card className='!p-0'>
+                        <Map className="w-full h-full" />
+                    </Card>
+                    <div className='grid grid-cols-2 gap-4'>
+                        <Link href='https://github.com/KevinCastle' target='_blank' className='w-full h-full'>
+                            <Card link={true} className='flex justify-center items-center text-center !bg-gray-700/50 hover:!bg-gray-700/60 h-full w-full'>
                                 <PiGithubLogoFill size="3rem" aria-label="Github" role="img" className='mx-auto' />
                             </Card>
-                            </Link>
-                            <Link href='https://www.linkedin.com/in/kevin-castillo11/' target='_blank' className='w-full h-full'>
-                                <Card link={true} className='flex justify-center items-center text-center !bg-[#0A66C2]/50 hover:!bg-[#0A66C2]/60 h-full w-full'>
+                        </Link>
+                        <Link href='https://www.linkedin.com/in/kevin-castillo11/' target='_blank' className='w-full h-full'>
+                            <Card link={true} className='flex justify-center items-center text-center !bg-[#0A66C2]/50 hover:!bg-[#0A66C2]/60 h-full w-full'>
                                 <PiLinkedinLogoFill size="3rem" aria-label="Linkedin" role="img" className='mx-auto' />
                             </Card>
-                            </Link>
-                            <Link href='https://www.instagram.com/kevcastles.dev/' target='_blank' className='w-full h-full'>
-                                <Card link={true} className='flex justify-center items-center text-center !bg-[#d62976]/50 hover:!bg-[#d62976]/60 h-full w-full'>
+                        </Link>
+                        <Link href='https://www.instagram.com/kevcastles.dev/' target='_blank' className='w-full h-full'>
+                            <Card link={true} className='flex justify-center items-center text-center !bg-[#d62976]/50 hover:!bg-[#d62976]/60 h-full w-full'>
                                 <PiInstagramLogoFill size="3rem" aria-label="Instagram" role="img" className='mx-auto' />
                             </Card>
-                            </Link>
-                            <Link href='https://tiktok.com/@kevcastles.dev' target='_blank' className='w-full h-full'>
-                                <Card link={true} className='flex justify-center items-center text-center !bg-[#00F2EA]/50 hover:!bg-[#00F2EA]/60 h-full w-full'>
+                        </Link>
+                        <Link href='https://tiktok.com/@kevcastles.dev' target='_blank' className='w-full h-full'>
+                            <Card link={true} className='flex justify-center items-center text-center !bg-[#00F2EA]/50 hover:!bg-[#00F2EA]/60 h-full w-full'>
                                 <PiTiktokLogoFill size="3rem" aria-label="Tiktok" role="img" className='mx-auto' />
                             </Card>
-                            </Link>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </Layout>
