@@ -118,9 +118,8 @@ const About = () => {
                             className="object-cover overflow-hidden opacity-20 group-hover:opacity-30 transition-opacity duration-200"
 
                         />
-                        <div className="absolute z-10 top-0 left-0 w-full h-full">
-                        <p className='absolute bottom-5 right-5 font-bold text-3xl'>SETUP</p>
-                        {/* TODO: COLOCAR LETRAS BOTTOM RIGHT, UNA IMAGEN DE FONDO DEL TECLADO Y REDIRIGE A BENTO */}
+                        <div className="sm:absolute z-10 sm:top-0 sm:left-0 w-full h-full">
+                        <p className='sm:absolute sm:bottom-5 sm:right-5 font-bold text-xl lg:text-3xl p-4 sm:p-0'>SETUP</p>
                         </div>
                     </Card>
                     </Link>
