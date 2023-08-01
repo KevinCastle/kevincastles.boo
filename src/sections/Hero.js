@@ -50,8 +50,8 @@ const Hero = () => {
                                     <p className='text-sm xl:text-lg'>Projects</p>
                                 </div>
                             </Card>
-                            <Link href='mailto:me@kevcastles.boo' target='_blank'>
-                                <Card link={true} className='!bg-tertiary-300/50 text-light flex flex-col justify-center items-center text-center py-6'>
+                            <Link href='mailto:me@kevcastles.boo' target='_blank' className='w-full h-full'>
+                                <Card link={true} className='!bg-tertiary-300/50 hover:!bg-tertiary-300/60 text-light flex flex-col justify-center items-center text-center py-6'>
                                     <PiEnvelopeSimpleFill className='w-[50%] h-auto mx-auto' />
                                     <p>Contact me</p>
                                 </Card>
@@ -89,26 +89,26 @@ const Hero = () => {
                     </div>
                     <div className='order-3 md:col-span-12 lg:col-span-3 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-4'>
                         <Card className='!p-0'>
-                            <Map className="w-full h-full rounded-2xl" />
+                            <Map className="w-full h-full" />
                         </Card>
                         <div className='grid grid-cols-2 gap-4'>
                             <Link href='https://github.com/KevinCastle' target='_blank' className='w-full h-full'>
-                            <Card link={true} className='flex justify-center items-center text-center !bg-gray-700/50 h-full w-full'>
+                                <Card link={true} className='flex justify-center items-center text-center !bg-gray-700/50 hover:!bg-gray-700/60 h-full w-full'>
                                 <PiGithubLogoFill size="3rem" aria-label="Github" role="img" className='mx-auto' />
                             </Card>
                             </Link>
                             <Link href='https://www.linkedin.com/in/kevin-castillo11/' target='_blank' className='w-full h-full'>
-                                <Card link={true} className='flex justify-center items-center text-center !bg-[#0A66C2]/50 h-full w-full'>
+                                <Card link={true} className='flex justify-center items-center text-center !bg-[#0A66C2]/50 hover:!bg-[#0A66C2]/60 h-full w-full'>
                                 <PiLinkedinLogoFill size="3rem" aria-label="Linkedin" role="img" className='mx-auto' />
                             </Card>
                             </Link>
                             <Link href='https://www.instagram.com/kevcastles.dev/' target='_blank' className='w-full h-full'>
-                                <Card link={true} className='flex justify-center items-center text-center !bg-[#d62976]/50 h-full w-full'>
+                                <Card link={true} className='flex justify-center items-center text-center !bg-[#d62976]/50 hover:!bg-[#d62976]/60 h-full w-full'>
                                 <PiInstagramLogoFill size="3rem" aria-label="Instagram" role="img" className='mx-auto' />
                             </Card>
                             </Link>
                             <Link href='https://tiktok.com/@kevcastles.dev' target='_blank' className='w-full h-full'>
-                                <Card link={true} className='flex justify-center items-center text-center !bg-[#00F2EA]/50 h-full w-full'>
+                                <Card link={true} className='flex justify-center items-center text-center !bg-[#00F2EA]/50 hover:!bg-[#00F2EA]/60 h-full w-full'>
                                 <PiTiktokLogoFill size="3rem" aria-label="Tiktok" role="img" className='mx-auto' />
                             </Card>
                             </Link>
