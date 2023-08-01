@@ -17,6 +17,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: ['var(--font-poppins)'],
+        caveat: ['var(--font-caveat)'],
       },
       colors: {
         dark: '#241926',

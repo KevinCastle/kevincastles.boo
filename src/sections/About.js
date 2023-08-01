@@ -1,92 +1,129 @@
 import Card from '@/components/Card'
 import Layout from '@/components/Layout'
-import { customLink as Link } from '@/components/Link'
 import Tooltip from '@/components/Tooltip'
-import { PiUserCircleLight, PiCodeLight, PiBooksLight, PiEyeglassesLight } from 'react-icons/pi'
+import { PiCodeLight, PiBooksLight, PiEyeglassesLight, PiReadCvLogoFill } from 'react-icons/pi'
 import { SiNintendo3Ds, SiJavascript, SiReact, SiVuedotjs, SiNextdotjs, SiTailwindcss } from 'react-icons/si'
+import { GiDiceTwentyFacesTwenty } from 'react-icons/gi'
+import Spotify from '@/components/Spotify'
+import Link from 'next/link'
+import { Caveat } from 'next/font/google'
+import Image from 'next/image'
+import ZeldaBg from '../../public/images/backgrounds/zelda-breath-of-the-wild2.gif';
+import CodeBg from '../../public/images/backgrounds/coding.gif';
+import StormlightBg from '../../public/images/backgrounds/the-stormlight-archive.gif';
+import RoleBg from '../../public/images/backgrounds/role-cat.gif';
+import NuphyBg from '../../public/images/backgrounds/nuphy-75.jpg'
+
+const caveat = Caveat({
+    subsets: ["latin"],
+    weight: ['400', '700'],
+    style: ['normal'],
+});
 
 const About = () => {
     return (
         <section id="about" className="w-full pt-10">
             <Layout>
-                <Card className='!bg-secondary-500/50 mb-4'>
-                    <div className='flex items-center'>
-                        <PiUserCircleLight size="2rem" />
-                        <h2 className='text-3xl font-bold ml-4'>About me</h2>
-                        <Link href={""} className={"text-xl font-semibold ml-auto"}>Resume</Link>
+                <div className='grid grid-cols-12 grid-rows-2 md:grid-rows-none gap-4'>
+                    <Card link={true} className='col-span-8 row-span-2 md:row-auto md:col-span-6 flex flex-col justify-center'>
+                        <p className={`font-bold text-4xl lg:text-5xl pb-2 ${caveat.className}`}>Journey before destination</p>
+                        <p className='text-lg text-balance'>A short personal history about pride, enthusiasm, downfall, and resilience. A story about how I started to be a web developer and where I am now.</p>
+                    </Card>
+                    <Link href={"/"} className='col-span-4 row-span-1 md:row-auto md:col-span-2 w-full h-full'>
+                        <Card link={true} className='!bg-primary-500/50 hover:!bg-primary-500/60 flex flex-col justify-center items-center text-center h-full w-full py-6'>
+                            <PiReadCvLogoFill className='w-[50%] h-auto mx-auto' />
+                            <p>Resume</p>
+                        </Card>
+                    </Link>
+                    <Card link={true} className='row-span-1 md:row-auto col-span-4'>
+                        <p>BLOG POST :D</p>
+                    </Card>
+                </div>
+                <div className='grid grid-cols-12 gap-4 mt-4'>
+                    <Card link={true} className='h-[180px] md:h-full col-span-12 md:col-span-4 xl:col-span-5'>
+                        <Spotify />
+                    </Card>
+                    <div className='col-span-12 sm:col-span-8 md:col-span-6 lg:col-span-5 xl:col-span-4 grid grid-cols-4 gap-4'>
+                        <Link href="/" target='_blank' className='col-span-2 w-full h-full'>
+                        <Card link={true}  className='flex flex-col justify-center items-center text-center h-full w-full py-6 aspect-square'>
+                                <Image
+                                    src={ZeldaBg}
+                                    alt="Playing"
+                                    fill={true}
+                                    className="object-cover overflow-hidden opacity-30 group-hover:opacity-60 transition-opacity duration-200"
+
+                                />
+                                <div className="absolute z-10 top-0 left-0 w-full h-full p-5">
+                            <SiNintendo3Ds size="3rem" className='h-auto mx-auto mb-2' />
+                            <p className='font-semibold'>PLaying</p>
+                            <p className='text-sm'>The Legend of Zelda: TOTK</p>
+                            </div>
+                        </Card>
+                        </Link>
+                        <Link href="/" target='_blank' className='col-span-2 w-full h-full'>
+                        <Card link={true}  className='flex flex-col justify-center items-center text-center h-full w-full py-6 aspect-square'>
+                                <Image
+                                    src={CodeBg}
+                                    alt="Coding"
+                                    fill={true}
+                                    className="object-cover overflow-hidden opacity-30 group-hover:opacity-60 transition-opacity duration-200"
+
+                                />
+                                <div className="absolute z-10 top-0 left-0 w-full h-full p-5">
+                            <PiCodeLight size="3rem" className='h-auto mx-auto mb-2' />
+                            <p className='font-semibold'>Coding</p>
+                            <p className='text-sm'>This Page</p>
+                            </div>
+                        </Card>
+                        </Link>
+                        <Link href="/" target='_blank' className='col-span-2 w-full h-full'>
+                        <Card link={true}  className='flex flex-col justify-center items-center text-center h-full w-full py-6 aspect-square'>
+                                <Image
+                                    src={StormlightBg}
+                                    alt="Reading"
+                                    fill={true}
+                                    className="object-cover overflow-hidden opacity-30 group-hover:opacity-60 transition-opacity duration-200"
+
+                                />
+                                <div className="absolute z-10 top-0 left-0 w-full h-full p-5">
+                            <PiBooksLight size="3rem" className='h-auto mx-auto mb-2' />
+                            <p className='font-semibold'>Reading</p>
+                            <p className='text-sm'>The Stormlight Archive</p>
+                            </div>
+                        </Card>
+                        </Link>
+                        <Link href="/" target='_blank' className='col-span-2 w-full h-full'>
+                        <Card link={true}  className='flex flex-col justify-center items-center text-center h-full w-full py-6 aspect-square'>
+                                <Image
+                                    src={RoleBg}
+                                    alt="Roleplaying"
+                                    fill={true}
+                                    className="object-cover overflow-hidden opacity-30 group-hover:opacity-60 transition-opacity duration-200"
+
+                                />
+                                <div className="absolute z-10 top-0 left-0 w-full h-full p-5">
+                                    <GiDiceTwentyFacesTwenty size="3rem" className='h-auto mx-auto mb-2' />
+                            <p className='font-semibold'>Roleplaying</p>
+                            <p className='text-sm'>Sly - Warlock Half-Elf</p>
+                            </div>
+                        </Card>
+                        </Link>
                     </div>
-                </Card>
-                <div className='grid md:grid-cols-3 gap-4'>
-                    <div className='md:col-span-2'>
-                        <Card>
-                            <p className='leading-relaxed mt-2'>Hi, this is Kevin, a <span className='font-semibold'>self-taught web developer</span> based in Santiago, Chile. I&apos;m truly passionate about <span className='font-semibold'>coding</span> and bringing things to life on the internet
-                                (even if that means occasionally breaking them). </p>
-                            <p className='leading-relaxed mt-2'>My <span className='font-semibold'>web development journey</span> began in 2015 when I met a JavaScript enthusiast friend who
-                                challenged my perception of the language. I used to be solely focused on Python and didn&apos;t consider JS as a &quot;real&quot; programming language.
-                                However, that encounter changed everything when he invited me to a <Link href={"/"} className={"font-semibold"}>freecodecamp</Link> meeting. Since that day, I&apos;ve been head over heels in love with web development.</p>
-                            <p className='leading-relaxed mt-2'>Over time, had the privilege of working as a freelancer and eventually found my way to <Link href={""} className={"font-semibold"}>Modyo</Link>, where I currently enjoy my day-to-day work. Currently deeply interested in the role of a <span className='font-semibold'>developer advocate</span>.
-                                That way, I get to combine my passion for <span className='font-semibold'>coding</span> with my desire to share knowledge with fellow developers.</p>
-                        </Card>
-                        <Card className='mt-4'>
-                            <p className='text-lg'>Few Technologies I&apos;ve been working with:</p>
-                            <div className='flex justify-around items-center mt-3'>
-                                <Tooltip message={"JavaScript"}>
-                                    <SiJavascript size={"2rem"} className='hover:text-primary-500  cursor-s-resize' />
-                                </Tooltip>
-                                <Tooltip message={"React"}>
-                                    <SiReact size={"2rem"} className='hover:text-blue-300  cursor-s-resize' />
-                                </Tooltip>
-                                <Tooltip message={"Vue.js"}>
-                                    <SiVuedotjs size={"2rem"} className='hover:text-green-500  cursor-s-resize' />
-                                </Tooltip>
-                                <Tooltip message={"Next.js"}>
-                                    <SiNextdotjs size={"2rem"} className='hover:text-gray-800  cursor-s-resize' />
-                                </Tooltip>
-                                <Tooltip message={"Tailwindcss"}>
-                                    <SiTailwindcss size={"2rem"} className='hover:text-blue-400  cursor-s-resize' />
-                                </Tooltip>
-                            </div>
-                        </Card>
-                    </div>
-                    { /* TODO: Podría hacer una pagina para cada uno de estos contenidos y que tenga un listado de lo ultimo jugado, leido, etc. */ }
-                    <div className='md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4'>
-                        <Card className='!bg-primary-500/75 md:max-lg:px-0'>
-                            <div className='flex items-center justify-around'>
-                                <SiNintendo3Ds size="3rem" />
-                                <div className='ml-2'>
-                                    <p className='font-semibold'>Currently playing</p>
-                                    <Link href="/">Zelda: TOTK</Link>
-                                </div>
-                            </div>
-                        </Card>
-                        <Card className='!bg-tertiary-300/75 md:max-lg:px-0'>
-                            <div className='flex items-center justify-around'>
-                                <PiCodeLight size="3rem" />
-                                <div className='ml-2'>
-                                    <p className='font-semibold'>Currently Coding</p>
-                                    <Link href="/">This page</Link>
-                                </div>
-                            </div>
-                        </Card>
-                        <Card className='!bg-gray-300/75 md:max-lg:px-0'>
-                            <div className='flex items-center justify-around'>
-                                <PiBooksLight size="3rem" />
-                                <div className='ml-2'>
-                                    <p className='font-semibold'>Currently Reading</p>
-                                    <Link href="/">The Stormlight Archive</Link>
-                                </div>
-                            </div>
-                        </Card>
-                        <Card className='!bg-secondary-700/75 md:max-lg:px-0'>
-                            <div className='flex items-center justify-around'>
-                                <PiEyeglassesLight size="3rem" />
-                                <div className='ml-2'>
-                                    <p className='font-semibold'>Currently Learning</p>
-                                    <Link href="/">Hiragana</Link>
-                                </div>
-                            </div>
-                        </Card>
-                    </div>
+                    <Link href="/" target='_blank' className='col-span-12 sm:col-span-4 md:col-span-2 lg:col-span-3 w-full h-full'>
+                    <Card link={true} className='w-full h-full'>
+                        <Image
+                            src={NuphyBg}
+                            alt="Roleplaying"
+                            fill={true}
+                            className="object-cover overflow-hidden opacity-20 group-hover:opacity-30 transition-opacity duration-200"
+
+                        />
+                        <div className="absolute z-10 top-0 left-0 w-full h-full">
+                        <p className='absolute bottom-5 right-5 font-bold text-3xl'>SETUP</p>
+                        {/* TODO: COLOCAR LETRAS BOTTOM RIGHT, UNA IMAGEN DE FONDO DEL TECLADO Y REDIRIGE A BENTO */}
+                        </div>
+                    </Card>
+                    </Link>
                 </div>
             </Layout>
         </section>
@@ -94,3 +131,11 @@ const About = () => {
 }
 
 export default About
+
+/*
+Hi, this is Kevin, a self-taught web developer based in Santiago, Chile. I'm truly passionate about coding and bringing things to life on the internet (even if that means occasionally breaking them).
+
+My web development journey began in 2015 when I met a JavaScript enthusiast friend who challenged my perception of the language. I used to be solely focused on Python and didn't consider JS as a "real" programming language. However, that encounter changed everything when he invited me to a freecodecamp meeting. Since that day, I've been head over heels in love with web development.
+
+Over time, had the privilege of working as a freelancer and eventually found my way to Modyo, where I currently enjoy my day-to-day work. Currently deeply interested in the role of a developer advocate. That way, I get to combine my passion for coding with my desire to share knowledge with fellow developers.
+*/
