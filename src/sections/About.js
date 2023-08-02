@@ -14,7 +14,7 @@ const About = () => {
     return (
         <section id="about" className="w-full mt-4">
             <Layout className='grid grid-cols-12 grid-rows-2 md:grid-rows-none gap-4'>
-                <Card link={true} className='col-span-8 row-span-2 md:row-auto md:col-span-6 flex flex-col justify-center'>
+                <Card link={true} className='col-span-8 row-span-2 md:row-auto md:col-span-6 xl:col-span-5 flex flex-col justify-center'>
                     <p className={`font-semibold antialiased text-4xl lg:text-5xl pb-2 ${caveat.className}`}>Journey before destination</p>
                     <p className='text-lg text-balance'>A short personal history about pride, enthusiasm, downfall, and resilience. A story about how I started to be a web developer and where I am now.</p>
                 </Card>
@@ -24,7 +24,7 @@ const About = () => {
                         <p>Resume</p>
                     </Card>
                 </Link>
-                <Card link={true} className='row-span-1 md:row-auto col-span-4'>
+                <Card link={true} className='row-span-1 md:row-auto col-span-4 xl:col-span-5'>
                     <p>BLOG POST :D</p>
                 </Card>
             </Layout>
