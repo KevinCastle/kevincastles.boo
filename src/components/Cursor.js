@@ -37,7 +37,7 @@ const Cursor = () => {
 
     return (
         <div
-            className={`fixed w-0 h-0 rounded-full shadow-[0_0_60px_40px] shadow-secondary-700 dark:shadow-secondary-500 translate-x-[-50%] translate-y-[-50%] ${hidden ? 'c--hidden ' : ' '}`}
+            className={`fixed w-0 h-0 rounded-full shadow-[0_0_60px_40px] shadow-secondary-700 dark:shadow-secondary-500 -translate-x-1/2 -translate-y-1/2 ${hidden ? 'c--hidden ' : ' '}`}
             style={{
                 left: `${position.x}px`,
                 top: `${position.y}px`,

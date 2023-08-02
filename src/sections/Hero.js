@@ -67,7 +67,7 @@ const Hero = () => {
                 <div className='order-1 md:order-2 md:col-span-6 lg:col-span-4 grid grid-cols-1'>
                     <Card className='col-span-4 md:!p-0 !bg-accent/20'>
                         <div className='avatar relative flex justify-center align-center w-full h-full'>
-                            <div className="w-[90%] md:w-full ease-in-out duration-300 absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]">
+                            <div className="w-[90%] md:w-full ease-in-out duration-300 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
                                 <svg className='animate-[spin_60s_linear_infinite]' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 288 288">
                                     <linearGradient id="PSgrad_0" x1="70.711%" x2="0%" y1="70.711%" y2="0%">
                                         <stop offset="0%" stopColor="#7f2f8e" stopOpacity="1" />
