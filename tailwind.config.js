@@ -15,10 +15,6 @@ module.exports = {
           '2xl': '6rem',
         },
       },
-      fontFamily: {
-        poppins: ['var(--font-poppins)'],
-        caveat: ['var(--font-caveat)'],
-      },
       colors: {
         dark: '#241926',
         darkless: '#2c212e',
