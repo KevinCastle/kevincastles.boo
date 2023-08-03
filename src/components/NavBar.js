@@ -1,94 +1,73 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react'
+import { useTheme } from "next-themes";
 import {
-    PiHouseLight,
-    PiUserCircleLight,
-    PiDesktopLight,
-    PiPencilCircleLight,
-    PiEnvelopeSimpleLight,
-    PiListBold
+    PiHouseFill,
+    PiNotePencilFill,
+    PiSunFill,
+    PiMoonStarsFill,
 } from "react-icons/pi"
-import {
-    MdOutlineCastle,
-    MdCastle
-} from "react-icons/md"
-import { usePathname } from 'next/navigation'
-import { customLink as Link } from './Link';
-import ThemeButton from './ThemeButton';
-
-const routes = [
-    { name: 'Home', href: '/', icon: PiHouseLight },
-    { name: 'About', href: '/#about', icon: PiUserCircleLight },
-    { name: 'Projects', href: '/projects', icon: PiDesktopLight },
-    { name: 'Articles', href: '/articles', icon: PiPencilCircleLight },
-]
+import Link from "next/link";
 
 const NavBar = () => {
-    const pathname = usePathname();
+    const { systemTheme, theme, setTheme } = useTheme();
+    const [currentTheme, setCurrentTheme] = useState("");
 
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    const handleMouseEnter = () => {
-        setIsExpanded(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsExpanded(false);
-    };
-
-    const toggleExpanded = () => {
-        setIsExpanded(!isExpanded);
-    };
+    useEffect(() => {
+        setCurrentTheme(theme === 'system' ? systemTheme : theme);
+    }, [theme, systemTheme]);
 
     return (
-        <>
-            <div onClick={toggleExpanded} className={`h-screen w-full fixed top-0 left-0 z-10 ${isExpanded ? 'bg-dark/75' : 'pointer-events-none'} transition duration-200`}/>
-            <button
-                className={`fixed block lg:hidden top-4 z-20 ${isExpanded ? '-left-20' : 'left-4'} transition duration-200`}
-                onClick={toggleExpanded}
-            >
-                <div className='rounded-full drop-shadow-sm bg-dark/50 dark:bg-secondary-900/50 p-2 flex justify-center items-center' >
-                    <PiListBold size="2rem" />
-                </div>
-            </button>
-            <nav
-                className={`fixed top-[50%] translate-y-[-50%] rounded-e-xl py-4 z-20 bg-secondary-950/25 ${isExpanded ? 'w-44 bg-secondary-950/75 drop-shadow-lg' : ' w-0 lg:w-16 bg-secondary-950/25 drop-shadow-sm'} transition-width duration-300`}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                <div className='flex items-center justify-center my-2 px-4'>
-                    {isExpanded ? <MdCastle size="2rem" /> : <MdOutlineCastle size="2rem" />}
-                </div>
-                <div className={`w-[80%] translate-x-[10%] h-[2px] ${isExpanded ? ' bg-light' : 'bg-light/25'} my-8`} />
-                {routes.map((route) => {
-                    const isActive = pathname.startsWith(route.href)
-
-                    return (
+        <div className="fixed bottom-0 sm:bottom-4 left-0 sm:left-1/2 sm:-translate-x-1/2 w-full sm:w-auto z-50">
+            <nav className="bg-gray-400/30 rounded-t-3xl sm:rounded-full border border-solid border-light/[0.18] drop-shadow-md backdrop-blur-sm p-5">
+                <ul className="flex justify-center items-center">
+                    <li className="nav-item">
                         <Link
-                            className={`nav-item flex items-center justify-start my-2 px-4 h-12 cursor-pointer ${isActive ? 'text-tertiary-600 dark:text-tertiary-500' : 'text-dark dark:text-light'} hover:text-tertiary-600 dark:hover:text-tertiary-500`}
-                            href={route.href}
-                            key={route.name}
-                            onClick={toggleExpanded}
+                            className="flex items-center justify-center hover:text-tertiary-400"
+                            href="/"
                         >
-                            <route.icon size="2rem" />
-                            <span className={`text-lg ${isExpanded ? 'ml-2' : 'hidden'}`}>{route.name}</span>
+                            <PiHouseFill size="2rem" />
+                            <span className="inline-block text-base ml-1">Home</span>
                         </Link>
-                    )
-                })}
-                <div className={`w-[80%] translate-x-[10%] h-[2px] ${isExpanded ? ' bg-light' : 'bg-light/25'} my-8`} />
-                <Link
-                    className={`nav-item flex items-center justify-start my-2 px-4 h-12 cursor-pointer text-accent dark:text-accent hover:text-tertiary-600 dark:hover:text-tertiary-500`}
-                    href={"mailto:kevinacastles@gmail.com"}
-                    target={"_blank"}
-                    onClick={toggleExpanded}>
-                    <PiEnvelopeSimpleLight size="2rem" />
-                    <span className={`text-lg ${isExpanded ? 'ml-2' : 'hidden'}`}>Contact</span>
-                </Link>
-                <div className='my-2 px-4 h-12'>
-                    <ThemeButton isExpanded={isExpanded} onClick={toggleExpanded} />
-                </div>
+                    </li>
+                    <li className="nav-item border-r-2 border-solid border-white px-4">
+                        <Link
+                            className="flex items-center justify-center hover:text-tertiary-400"
+                            href="/"
+                        >
+                            <PiNotePencilFill size="2rem" />
+                            <span className="inline-block text-base ml-1">Blog</span>
+                        </Link>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li className="nav-item px-4">
+                        <button
+                            className="flex items-center justify-center text-secondary-700 dark:text-primary-100 hover:text-secondary-500 dark:hover:text-primary-500"
+                            onClick={() => currentTheme == "dark" ? setTheme('light') : setTheme("dark")}
+                        >
+                            {currentTheme == "dark" ? <PiSunFill size="2rem" /> : <PiMoonStarsFill size="2rem" />}
+                            <span className="inline-block text-base ml-1">
+                                {currentTheme == "dark" ? "Light" : "dark"}
+                            </span>
+                        </button>
+                    </li>
+                    <li className="nav-item">
+                        ES/EN
+                    </li>
+                </ul>
             </nav>
-        </>
+        </div>
     )
+
+    // LOGO
+    // ----
+    // HOME
+    // BLOG
+    // 
+    // ----
+    // ES/ENG
+    // LIGHT/DARK
 }
 
 export default NavBar
