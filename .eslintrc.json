@@ -1,3 +1,109 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:react/recommended",
+    "eslint:recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "ignorePatterns": [
+    "dist",
+    ".eslintrc.cjs"
+  ],
+  "plugins": [
+    "react-refresh"
+  ],
+  "rules": {
+    "react-refresh/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "state"
+        ]
+      }
+    ],
+    "react/jsx-curly-spacing": [
+      "error",
+      {
+        "when": "never",
+        "attributes": {
+          "allowMultiline": true
+        },
+        "children": true
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        }
+      }
+    ],
+    "no-shadow": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "18"
+    },
+    "import/extensions": [
+      ".js",
+      ".jsx"
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
+  }
 }
