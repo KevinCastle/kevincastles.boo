@@ -1,18 +1,18 @@
-import Footer from '@/components/Footer'
-import NavBar from '@/components/NavBar'
-import '@/styles/globals.css'
-import { Poppins } from "next/font/google"
-import Head from 'next/head'
-import { ThemeProvider } from "next-themes"
-import Cursor from '@/components/Cursor'
+import { Poppins } from 'next/font/google';
+import Head from 'next/head';
+import { ThemeProvider } from 'next-themes';
+import Footer from '../components/Footer';
+import NavBar from '../components/NavBar';
+import Cursor from '../components/Cursor';
+import '../styles/globals.css';
 
 const poppins = Poppins({
-  subsets: ["latin"],
+  subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
 });
 
-function Application ({ Component, pageProps }) {
+function Application({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -29,7 +29,7 @@ function Application ({ Component, pageProps }) {
         </ThemeProvider>
       </main>
     </>
-  )
+  );
 }
 
-export default Application
+export default Application;

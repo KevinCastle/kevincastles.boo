@@ -19,6 +19,7 @@
     "react-refresh"
   ],
   "rules": {
+    "react/jsx-props-no-spreading": "off",
     "react-refresh/only-export-components": [
       "warn",
       {

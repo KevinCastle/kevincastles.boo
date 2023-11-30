@@ -1,9 +1,9 @@
-const Layout = ({children, className=""}) => {
+function Layout({ children, className = '' }) {
   return (
     <div className={`container ${className}`}>
-        {children}
+      {children}
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
