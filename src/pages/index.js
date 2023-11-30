@@ -3,6 +3,7 @@ import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Experience from '../sections/Experience';
 import Miscellaneous from '../sections/Miscellaneous';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -15,11 +16,12 @@ export default function Home() {
         <meta name="description" content="Portfolio and blog" />
       </Head>
 
-      <main className="bg-circles w-full h-full relative">
+      <main className="bg-circles w-full h-full relative pb-20">
         <Hero />
         <About />
         <Experience />
         <Miscellaneous />
+        <Footer />
       </main>
     </>
   );

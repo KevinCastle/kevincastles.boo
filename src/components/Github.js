@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { PiGitForkFill, PiStarFill } from 'react-icons/pi';
+import Link from 'next/link';
 import { GithubStats } from '../lib/github';
 
-export default function Github() {
+export default function Github({ className }) {
   const [stats, setStats] = useState({ stars: 0, forks: 0 });
 
   useEffect(() => {
@@ -16,11 +17,11 @@ export default function Github() {
   }, []);
 
   return (
-    <a
+    <Link
       href="https://github.com/KevinCastle/kevincastles.boo"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex gap-3 text-base"
+      className={`flex gap-3 text-base ${className}`}
     >
       <span className="flex items-center gap-1">
         <PiStarFill />
@@ -32,6 +33,6 @@ export default function Github() {
         {' '}
         {stats.forks}
       </span>
-    </a>
+    </Link>
   );
 }

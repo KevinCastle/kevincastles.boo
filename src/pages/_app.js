@@ -1,7 +1,6 @@
 import { Poppins } from 'next/font/google';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
-import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import Cursor from '../components/Cursor';
 import '../styles/globals.css';
@@ -25,7 +24,6 @@ function Application({ Component, pageProps }) {
         <ThemeProvider attribute="class">
           <NavBar />
           <Component {...pageProps} />
-          <Footer />
         </ThemeProvider>
       </main>
     </>

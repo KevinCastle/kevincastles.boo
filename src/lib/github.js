@@ -22,6 +22,25 @@ const getRepoStarsAndForks = async (owner, repo) => {
   }
 };
 
+export const starRepo = async (owner, repo) => {
+  const endpoint = `https://api.github.com/user/starred/${owner}/${repo}`;
+  const headers = {
+    Authorization: `Token ${token}`,
+  };
+
+  try {
+    const response = await fetch(endpoint, {
+      method: 'PUT',
+      headers,
+    });
+
+    return response;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+};
+
 export const GithubStats = async () => {
   const repo = {
     owner: 'KevinCastle',
