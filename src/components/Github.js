@@ -10,7 +10,6 @@ export default function Github({ className }) {
     const getStats = async () => {
       const data = await GithubStats();
       setStats(data);
-      console.log(data);
     };
 
     getStats();
