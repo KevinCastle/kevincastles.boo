@@ -20,21 +20,21 @@ function Hero() {
           <Card className="!bg-primary-500/[0.85] text-dark flex justify-center items-center text-center py-4">
             <div className="flex flex-col justify-center items-center">
               <p className="text-4xl xl:text-5xl font-bold">Kevin Castillo</p>
-              <p className="text-xl mt-1 xl:mt-3">Frontend developer</p>
+              <p className="text-xl mt-1 xl:mt-3">Frontend web developer</p>
             </div>
           </Card>
           <div className="grid grid-cols-3 gap-4 mt-4">
             <Card className="!bg-accent/50 text-light flex justify-center items-center text-center py-6">
               <div>
                 <div className="flex flex-col justify-center items-center">
-                  <p className="text-3xl xl:text-5xl font-bold">2+</p>
+                  <p className="text-3xl xl:text-5xl font-bold">3+</p>
                   <p className="text-sm xl:text-lg break-words xl:break-normal">Years exp.</p>
                 </div>
               </div>
             </Card>
             <Card className="!bg-pink-500/50 text-light flex justify-center items-center text-center py-6">
               <div className="flex flex-col justify-center items-center">
-                <p className="text-3xl xl:text-5xl font-bold">8+</p>
+                <p className="text-3xl xl:text-5xl font-bold">9+</p>
                 <p className="text-sm xl:text-lg">Projects</p>
               </div>
             </Card>

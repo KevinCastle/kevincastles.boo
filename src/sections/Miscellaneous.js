@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Spotify from '../components/Spotify';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
-import ZeldaBg from '../../public/images/backgrounds/zelda-breath-of-the-wild2.gif';
+import PersonaBg from '../../public/images/backgrounds/persona-5.gif';
 import CodeBg from '../../public/images/backgrounds/coding.gif';
 import StormlightBg from '../../public/images/backgrounds/the-stormlight-archive.gif';
 import RoleBg from '../../public/images/backgrounds/role-cat.gif';
@@ -23,7 +23,7 @@ function Miscellaneous() {
           <Link href="/" target="_blank" className="col-span-2 w-full h-full">
             <Card link className="flex flex-col justify-center items-center text-center h-full w-full py-6 aspect-square">
               <Image
-                src={ZeldaBg}
+                src={PersonaBg}
                 alt="Playing"
                 fill
                 className="object-cover overflow-hidden opacity-30 group-hover:opacity-60 transition-opacity duration-200"
@@ -31,7 +31,7 @@ function Miscellaneous() {
               <div className="absolute z-10 top-0 left-0 w-full h-full p-5">
                 <SiNintendo3Ds size="3rem" className="h-auto mx-auto mb-2" />
                 <p className="font-semibold">PLaying</p>
-                <p className="text-sm">The Legend of Zelda: TOTK</p>
+                <p className="text-sm">Persona 5 Royal</p>
               </div>
             </Card>
           </Link>
