@@ -26,7 +26,7 @@ export default function Spotify() {
         src={song.thumbnail}
         alt={song.album}
         fill
-        className="object-cover overflow-hidden opacity-30 group-hover:opacity-60  transition-opacity duration-200"
+        className="object-cover overflow-hidden opacity-50 group-hover:opacity-70 dark:opacity-30 dark:group-hover:opacity-60  transition-opacity duration-200"
       />
       <div className="absolute z-10 top-0 left-0 w-full h-full bg-dark/30 p-5">
         <div className="w-full h-full flex flex-col xl:flex-row xl:items-center">

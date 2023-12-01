@@ -32,33 +32,33 @@ function Projects() {
           <div className="grid grid-cols-9 md:grid-cols-3 gap-2 md:gap-6 lg:gap-12 justify-content-center">
 
             <Tooltip message="HTML5">
-              <SiHtml5 className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-[#F26529]/80 dark:hover:!text-[#F26529]/80 transition duration-300" />
+              <SiHtml5 className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-[#F26529]/80 dark:hover:!text-[#F26529]/80 transition duration-300" />
             </Tooltip>
             <Tooltip message="JavaScript">
-              <SiJavascript className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-[#F7E017]/80 dark:hover:!text-[#F7E017]/80 transition duration-300" />
+              <SiJavascript className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-[#F7E017]/80 dark:hover:!text-[#F7E017]/80 transition duration-300" />
             </Tooltip>
             <Tooltip message="TypeScript">
-              <SiTypescript className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-[#2D79C7]/80 dark:hover:!text-[#2D79C7]/80 transition duration-300" />
+              <SiTypescript className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-[#2D79C7]/80 dark:hover:!text-[#2D79C7]/80 transition duration-300" />
             </Tooltip>
 
             <Tooltip message="Sass">
-              <SiSass className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-[#CF639A]/80 dark:hover:!text-[#CF639A]/80 transition duration-300" />
+              <SiSass className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-[#CF639A]/80 dark:hover:!text-[#CF639A]/80 transition duration-300" />
             </Tooltip>
             <Tooltip message="Bootstrap">
-              <SiBootstrap className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-[#7611F7]/80 dark:hover:!text-[#7611F7]/80 transition duration-300" />
+              <SiBootstrap className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-[#7611F7]/80 dark:hover:!text-[#7611F7]/80 transition duration-300" />
             </Tooltip>
             <Tooltip message="Tailwind">
-              <SiTailwindcss className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-[#41BDF8]/80 dark:hover:!text-[#41BDF8]/80 transition duration-300" />
+              <SiTailwindcss className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-[#41BDF8]/80 dark:hover:!text-[#41BDF8]/80 transition duration-300" />
             </Tooltip>
 
             <Tooltip message="React" top>
-              <SiReact className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-[#349ECA]/80 dark:hover:!text-[#349ECA]/80 transition duration-300" />
+              <SiReact className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-[#349ECA]/80 dark:hover:!text-[#349ECA]/80 transition duration-300" />
             </Tooltip>
             <Tooltip message="Vue.JS" top>
-              <SiVuedotjs className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-[#42B883]/80 dark:hover:!text-[#42B883]/80 transition duration-300" />
+              <SiVuedotjs className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-[#42B883]/80 dark:hover:!text-[#42B883]/80 transition duration-300" />
             </Tooltip>
             <Tooltip message="Next.JS" top>
-              <SiNextdotjs className="w-full h-full light:text-dark/30 dark:!text-light/30 hover:!text-gray-600/80 dark:hover:!text-gray-950/80 transition duration-300" />
+              <SiNextdotjs className="w-full h-full text-white/50 dark:!text-light/30 hover:!text-gray-600/80 dark:hover:!text-gray-950/80 transition duration-300" />
             </Tooltip>
 
           </div>

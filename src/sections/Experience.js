@@ -12,7 +12,7 @@ function Experience() {
       <Layout className="grid grid-cols-12 gap-4">
         <div className="col-span-12 sm:col-span-9 h-full">
           <Link href="" target="">
-            <Card link className="!bg-secondary-500/70 hover:!bg-secondary-500/90 h-full flex flex-col justify-center">
+            <Card link className="!bg-secondary-600/70 hover:!bg-secondary-600/90 dark:!bg-secondary-500/70 dark:hover:!bg-secondary-500/90 h-full flex flex-col justify-center">
               <p className="text-2xl font-semibold">Where I&apos;ve worked</p>
               <p className="text-4xl text-[#65D6A6] font-semibold">modyo</p>
               <p className="text-xs -mt-2">2020 - Present</p>
@@ -30,7 +30,7 @@ function Experience() {
           </Link>
         </div>
         <Link href="/" className="col-span-12 sm:col-span-3 w-full h-full">
-          <Card link className="!bg-primary-500/50 hover:!bg-primary-500/60 flex flex-col justify-center items-center text-center h-full w-full py-6">
+          <Card link className="!bg-[#EBB400]/80 hover:!bg-[#EBB400]/90 darK!bg-primary-500/50 dark:hover:!bg-primary-500/60 flex flex-col justify-center items-center text-center h-full w-full py-6">
             <PiReadCvLogoFill className="w-[20%] sm:w-[50%] h-auto mx-auto" />
             <p>Resume</p>
           </Card>

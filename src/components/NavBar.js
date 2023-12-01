@@ -18,11 +18,11 @@ function NavBar() {
 
   return (
     <div className="fixed bottom-0 sm:bottom-4 left-0 sm:left-1/2 sm:-translate-x-1/2 w-full sm:w-auto z-50">
-      <nav className="bg-gray-400/30 rounded-t-3xl sm:rounded-full border border-solid border-light/[0.18] drop-shadow-md backdrop-blur-sm p-5">
+      <nav className="bg-gray-400/30 text-tertiary-800 dark:text-white rounded-t-3xl sm:rounded-full border border-solid border-light/[0.18] drop-shadow-md backdrop-blur-sm p-5">
         <ul className="flex justify-center items-center">
           <li className="nav-item">
             <Link
-              className="flex items-center justify-center hover:text-tertiary-400"
+              className="flex items-center justify-center hover:text-tertiary-400 transition-colors duration-200 ease-in-out"
               href="/"
             >
               <PiHouseFill size="2rem" />
@@ -31,7 +31,7 @@ function NavBar() {
           </li>
           <li className="nav-item border-r-2 border-solid border-white px-4">
             <Link
-              className="flex items-center justify-center hover:text-tertiary-400"
+              className="flex items-center justify-center hover:text-tertiary-400 transition-colors duration-200 ease-in-out"
               href="/"
             >
               <PiNotePencilFill size="2rem" />

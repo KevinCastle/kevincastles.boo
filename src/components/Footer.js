@@ -25,7 +25,7 @@ function Footer() {
         <div className=" px-4 py-1">
           <button
             type="button"
-            className={`rounded-full ${buttonBg} backdrop-blur-sm border border-solid border-gray-500/[0.18] drop-shadow-md flex items-center gap-2 py-2 px-4 transition-colors duration-300 ease-in-out`}
+            className={`rounded-full ${buttonBg} text-white backdrop-blur-sm border border-solid border-gray-500/[0.18] drop-shadow-md flex items-center gap-2 py-2 px-4 transition-colors duration-300 ease-in-out`}
             onClick={handleStarRepo}
           >
             <span>{buttonText}</span>
@@ -38,7 +38,7 @@ function Footer() {
             href="https://www.buymeacoffee.com/kevcastles"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[#FFDD00]/60 hover:text-[#FFDD00]/100  transition-colors duration-300 ease-in-out"
+            className="flex items-center gap-2 text-[#d1a300]/90 hover:text-[#d1a300]/100 dark:text-[#FFDD00]/60 dark:hover:text-[#FFDD00]/100  transition-colors duration-300 ease-in-out"
           >
             Buy me a coffee
             <SiBuymeacoffee className="text-lg" />
