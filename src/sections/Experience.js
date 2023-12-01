@@ -30,7 +30,7 @@ function Experience() {
           </Link>
         </div>
         <Link href="/" className="col-span-12 sm:col-span-3 w-full h-full">
-          <Card link className="!bg-[#EBB400]/80 hover:!bg-[#EBB400]/90 darK!bg-primary-500/50 dark:hover:!bg-primary-500/60 flex flex-col justify-center items-center text-center h-full w-full py-6">
+          <Card link className="!bg-[#EBB400]/80 hover:!bg-[#EBB400]/90 dark:!bg-primary-500/50 dark:hover:!bg-primary-500/60 flex flex-col justify-center items-center text-center h-full w-full py-6">
             <PiReadCvLogoFill className="w-[20%] sm:w-[50%] h-auto mx-auto" />
             <p>Resume</p>
           </Card>
