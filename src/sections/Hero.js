@@ -3,9 +3,9 @@ import {
   PiEnvelopeSimpleFill,
   PiGithubLogoFill,
   PiLinkedinLogoFill,
-  PiInstagramLogoFill,
   PiTiktokLogoFill,
 } from 'react-icons/pi';
+import { SiThreads } from 'react-icons/si';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import profilePic from '../../public/images/profile/avatar.png';
@@ -98,9 +98,9 @@ function Hero() {
                 <PiLinkedinLogoFill size="3rem" aria-label="Linkedin" role="img" className="mx-auto" />
               </Card>
             </Link>
-            <Link href="https://www.instagram.com/kevcastles.dev/" target="_blank" className="w-full h-full">
+            <Link href="https://www.threads.net/@kevcastles.dev" target="_blank" className="w-full h-full">
               <Card link className="flex justify-center items-center text-center !bg-[#d62976]/70 hover:!bg-[#d62976]/80 dark:!bg-[#d62976]/50 dark:hover:!bg-[#d62976]/60 h-full w-full">
-                <PiInstagramLogoFill size="3rem" aria-label="Instagram" role="img" className="mx-auto" />
+                <SiThreads size="3rem" aria-label="Threads" role="img" className="mx-auto" />
               </Card>
             </Link>
             <Link href="https://tiktok.com/@kevcastles.dev" target="_blank" className="w-full h-full">
