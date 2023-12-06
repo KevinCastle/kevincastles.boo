@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
 import NavBar from '../components/NavBar';
 import Cursor from '../components/Cursor';
+import Logo from '../components/Logo';
 import '../styles/globals.css';
 
 const poppins = Poppins({
@@ -20,6 +21,7 @@ function Application({ Component, pageProps }) {
 
       </Head>
       <main className={poppins.className}>
+        <Logo />
         <Cursor />
         <ThemeProvider attribute="class">
           <NavBar />
