@@ -20,9 +20,9 @@ function Footer() {
 
   return (
     <footer className="relative w-full z-20">
-      <Layout className="flex items-center justify-center text-sm py-8 divide-x-2 divide-gray-500">
-        <p className="px-4 py-1">Designed & Built by Kevin Castillo</p>
-        <div className=" px-4 py-1">
+      <Layout className="flex flex-col lg:flex-row items-center justify-center text-sm py-8 lg:divide-x-2 lg:divide-gray-500">
+        <p className="lg:px-4 lg:py-1">Designed & Built by Kevin Castillo</p>
+        <div className="hidden lg:block px-4 py-1">
           <button
             type="button"
             className={`rounded-full ${buttonBg} text-white backdrop-blur-sm border border-solid border-gray-500/[0.18] drop-shadow-md flex items-center gap-2 py-2 px-4 transition-colors duration-300 ease-in-out`}
@@ -32,8 +32,8 @@ function Footer() {
             <PiStarFill className={`${starBg} transition-colors duration-300 ease-in-out`} />
           </button>
         </div>
-        <Github className="px-4 py-1" />
-        <div className="px-4 py-1">
+        <Github className="lg:px-4 lg:py-1" />
+        <div className="lg:px-4 py-1">
           <Link
             href="https://www.buymeacoffee.com/kevcastles"
             target="_blank"
