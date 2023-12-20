@@ -1,6 +1,7 @@
 import { Poppins } from 'next/font/google';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
+import { isDesktop } from 'react-device-detect';
 import NavBar from '../components/NavBar';
 import Cursor from '../components/Cursor';
 import Logo from '../components/Logo';
@@ -21,8 +22,8 @@ function Application({ Component, pageProps }) {
 
       </Head>
       <main className={poppins.className}>
-        <Logo />
-        <Cursor />
+        {isDesktop && <Logo />}
+        {isDesktop && <Cursor />}
         <ThemeProvider attribute="class">
           <NavBar />
           <Component {...pageProps} />
