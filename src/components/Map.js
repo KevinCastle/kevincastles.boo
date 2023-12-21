@@ -2,7 +2,7 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useEffect, useRef } from 'react';
 
-function Map({ className = '' }) {
+function Map({ className = '', lat = -33.45694, lng = -70.64827 }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
 
@@ -15,10 +15,7 @@ function Map({ className = '' }) {
         {
           geometry: {
             type: 'Point',
-            coordinates: {
-              lat: -33.45694,
-              lng: -70.64827,
-            },
+            coordinates: [lng, lat],
           },
         },
       ],
@@ -27,7 +24,7 @@ function Map({ className = '' }) {
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v12',
-      center: [-70.64827, -33.45694],
+      center: [lng, lat],
       zoom: 11,
     });
 
@@ -38,6 +35,7 @@ function Map({ className = '' }) {
 
     const image = document.createElement('img');
     image.src = '/images/profile/avatar.png';
+    image.alt = 'Marker';
     image.className = 'w-[100%] h-[100%] object-cover';
 
     markerIcon.appendChild(image);
@@ -48,7 +46,12 @@ function Map({ className = '' }) {
 
     const mapboxInfo = document.querySelector('.mapboxgl-control-container');
     mapboxInfo.remove();
-  }, []);
+
+    // Cleanup on unmount
+    return () => {
+      map.current.remove();
+    };
+  }, [lat, lng]);
 
   return (
     <div className="w-full h-full">
