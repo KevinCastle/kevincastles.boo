@@ -1,15 +1,58 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { PiSpotifyLogoFill, PiCircleFill } from 'react-icons/pi';
-import useSWR from 'swr';
+import { normalizeCurrentlyListening, normalizeRecentlyPlayed } from '../lib/utils/normalizeSpotify';
+import { getNowPlaying, getRecentlyPlayed } from '../lib/spotify';
 
 export default function Spotify() {
-  const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data: nowPlaying } = useSWR('/api/spotify/currently-playing', fetcher);
-  const { data: recentlyPlayed } = useSWR('/api/spotify/recently-played', fetcher);
+  const [nowPlaying, setNowPlaying] = useState(null);
+  const [song, setSong] = useState(null);
 
-  const song = nowPlaying && nowPlaying.isPlaying ? nowPlaying : recentlyPlayed;
+  useEffect(() => {
+    const fetchRecentlyPlayed = async () => {
+      const response = await getRecentlyPlayed().catch((err) => {
+        console.error('Are you connected?', err);
+        return null;
+      });
+
+      if (!response || response.status === 204 || response.status > 400) {
+        return { recently_played: false };
+      }
+
+      const { items = [] } = await response.json();
+      return items.map(normalizeRecentlyPlayed).sort((a, b) => b.played_at - a.played_at)[0];
+    };
+
+    const fetchNowPlaying = async () => {
+      const response = await getNowPlaying().catch((err) => {
+        console.error('Are you connected?', err);
+        return null;
+      });
+
+      if (!response || response.status === 204 || response.status > 400) {
+        return { is_playing: false };
+      }
+
+      const data = await response.json();
+      return normalizeCurrentlyListening(data);
+    };
+
+    const fetchData = async () => {
+      const [
+        nowPlayingData,
+        recentlyPlayedData,
+      ] = await Promise.all([
+        fetchNowPlaying(),
+        fetchRecentlyPlayed(),
+      ]);
+      setNowPlaying(nowPlayingData);
+      setSong(nowPlayingData && nowPlayingData.isPlaying ? nowPlayingData : recentlyPlayedData);
+    };
+
+    fetchData();
+  }, []);
 
   if (!song) {
     return (
@@ -20,7 +63,7 @@ export default function Spotify() {
     );
   }
 
-  return (
+  return song && song ? (
     <Link href={song.url} target="_blank">
       <Image
         src={song.thumbnail}
@@ -42,5 +85,10 @@ export default function Spotify() {
         </div>
       </div>
     </Link>
+  ) : (
+    <div className="absolute z-10 top-0 left-0 w-full h-full p-5">
+      <PiSpotifyLogoFill size="2rem" color="#1DB954" />
+      <p>Loading...</p>
+    </div>
   );
 }
