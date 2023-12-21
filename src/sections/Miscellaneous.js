@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Spotify from '../components/Spotify';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
-import NuphyBg from '../../public/images/backgrounds/nuphy-75.jpg';
+import NuphyBg from '../../public/images/backgrounds/nuphy-75.webp';
 
 function Video({ src, ...props }) {
   return (

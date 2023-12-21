@@ -34,7 +34,7 @@ function Map({ className = '', lat = -33.45694, lng = -70.64827 }) {
     markerIcon.className = 'markerIcon w-[85px] h-[85px] hover:w-[105px] hover:h-[105px] bg-primary-500/20 border-4 hover:border-6 border-solid border-white rounded-full overflow-hidden flex justify-center items-center hover:transition-all ease-in-out duration-500';
 
     const image = document.createElement('img');
-    image.src = '/images/profile/avatar.png';
+    image.src = '/images/profile/avatar.webp';
     image.alt = 'Marker';
     image.className = 'w-[100%] h-[100%] object-cover';
 
