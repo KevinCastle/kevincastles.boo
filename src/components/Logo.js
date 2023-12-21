@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import CastleLogo from '../../public/images/backgrounds/kevcastles-logo.webp';
+import CastleLogo from '../../public/images/logo/kevcastles-logo.webp';
 
 function Logo() {
   return (

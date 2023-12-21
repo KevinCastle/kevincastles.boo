@@ -8,7 +8,7 @@ import {
 import { SiThreads } from 'react-icons/si';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import profilePic from '../../public/images/profile/avatar.png';
+import profilePic from '../../public/images/profile/avatar.webp';
 import Card from '../components/Card';
 import Map from '../components/Map';
 
