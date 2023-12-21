@@ -6,29 +6,37 @@ import Image from 'next/image';
 import Spotify from '../components/Spotify';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
-import PersonaBg from '../../public/images/backgrounds/persona-5.gif';
-import CodeBg from '../../public/images/backgrounds/coding.gif';
-import StormlightBg from '../../public/images/backgrounds/the-stormlight-archive.gif';
-import RoleBg from '../../public/images/backgrounds/role-cat.gif';
 import NuphyBg from '../../public/images/backgrounds/nuphy-75.jpg';
+
+function Video({ src, ...props }) {
+  return (
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="object-cover overflow-hidden opacity-50 group-hover:opacity-70 dark:opacity-30 dark:group-hover:opacity-60 transition-opacity duration-200 w-full h-full absolute top-0 left-0 right-0 bottom-0"
+      {...props}
+    >
+      <source
+        src={src}
+        type="video/webm"
+      />
+    </video>
+  );
+}
 
 function Miscellaneous() {
   return (
     <section id="miscellaneous" className="w-full mt-4">
       <Layout className="grid grid-cols-12 gap-4">
-        <Card link className="h-[180px] md:h-full col-span-12 md:col-span-4 xl:col-span-5 p-0">
+        <Card link className="h-[180px] md:h-full col-span-12 md:col-span-4 xl:col-span-5 !p-0">
           <Spotify className="p-5" />
         </Card>
         <div className="col-span-12 sm:col-span-8 md:col-span-6 lg:col-span-5 xl:col-span-4 grid grid-cols-4 gap-4">
           <Link href="/" target="_blank" className="col-span-2 w-full h-full">
             <Card link className="h-full w-full py-6 aspect-square">
-              <Image
-                src={PersonaBg}
-                alt="Playing"
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 768px) 30vw, 20vw"
-                className="object-cover overflow-hidden opacity-50 group-hover:opacity-70 dark:opacity-30 dark:group-hover:opacity-60 transition-opacity duration-200"
-              />
+              <Video src="/videos/backgrounds/persona-5.webm" />
               <div className="absolute z-10 top-0 left-0 flex flex-col justify-center items-center text-center w-full h-full p-5">
                 <SiNintendo3Ds size="3rem" className="h-auto mx-auto mb-2" />
                 <p className="font-semibold">PLaying</p>
@@ -38,13 +46,7 @@ function Miscellaneous() {
           </Link>
           <Link href="/" target="_blank" className="col-span-2 w-full h-full">
             <Card link className="h-full w-full py-6 aspect-square">
-              <Image
-                src={CodeBg}
-                alt="Coding"
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 768px) 30vw, 20vw"
-                className="object-cover overflow-hidden opacity-50 group-hover:opacity-70 dark:opacity-30 dark:group-hover:opacity-60 transition-opacity duration-200"
-              />
+              <Video src="/videos/backgrounds/coding.webm" />
               <div className="absolute z-10 top-0 left-0 flex flex-col justify-center items-center text-center w-full h-full p-5">
                 <PiCodeLight size="3rem" className="h-auto mx-auto mb-2" />
                 <p className="font-semibold">Coding</p>
@@ -54,13 +56,7 @@ function Miscellaneous() {
           </Link>
           <Link href="/" target="_blank" className="col-span-2 w-full h-full">
             <Card link className="h-full w-full py-6 aspect-square">
-              <Image
-                src={StormlightBg}
-                alt="Reading"
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 768px) 30vw, 20vw"
-                className="object-cover overflow-hidden opacity-50 group-hover:opacity-70 dark:opacity-30 dark:group-hover:opacity-60 transition-opacity duration-200"
-              />
+              <Video src="/videos/backgrounds/the-stormlight-archive.webm" />
               <div className="absolute z-10 top-0 left-0 flex flex-col justify-center items-center text-center w-full h-full p-5">
                 <PiBooksLight size="3rem" className="h-auto mx-auto mb-2" />
                 <p className="font-semibold">Reading</p>
@@ -70,13 +66,7 @@ function Miscellaneous() {
           </Link>
           <Link href="/" target="_blank" className="col-span-2 w-full h-full">
             <Card link className="h-full w-full py-6 aspect-square">
-              <Image
-                src={RoleBg}
-                alt="Roleplaying"
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 768px) 30vw, 20vw"
-                className="object-cover overflow-hidden opacity-50 group-hover:opacity-70 dark:opacity-30 dark:group-hover:opacity-60 transition-opacity duration-200"
-              />
+              <Video src="/videos/backgrounds/role-cat.webm" />
               <div className="absolute z-10 top-0 left-0 flex flex-col justify-center items-center text-center w-full h-full p-5">
                 <GiDiceTwentyFacesTwenty size="3rem" className="h-auto mx-auto mb-2" />
                 <p className="font-semibold">Roleplaying</p>
