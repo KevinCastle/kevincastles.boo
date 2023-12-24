@@ -1,61 +1,59 @@
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import { useEffect, useRef } from 'react';
+import {
+  useEffect, useLayoutEffect, useRef, useState,
+} from 'react';
+import Image from 'next/image';
 
-function Map({ className = '', lat = -33.45694, lng = -70.64827 }) {
+function Map({
+  className = '',
+}) {
   const mapContainer = useRef(null);
-  const map = useRef(null);
+  const [map, setMap] = useState(null);
+  const [mapStyle, setMapStyle] = useState('streets-v12');
+  const [width, setWidth] = useState(350);
+  const [height, setHeight] = useState(250);
+
+  const accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
+
+  const lat = -33.4419;
+  const lng = -70.648;
+  const zoom = 10;
+  const logoUrl = 'https://kevcastles.netlify.app/images/logo/kevcastles-logo.png';
 
   useEffect(() => {
-    mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
-
-    const geojson = {
-      type: 'Feature',
-      features: [
-        {
-          geometry: {
-            type: 'Point',
-            coordinates: [lng, lat],
-          },
-        },
-      ],
+    const updateMapStyle = () => {
+      const isDarkMode = document.documentElement.classList.contains('dark');
+      setMapStyle(isDarkMode ? 'dark-v11' : 'streets-v12');
     };
 
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v12',
-      center: [lng, lat],
-      zoom: 11,
+    const observer = new MutationObserver((mutationsList) => {
+      mutationsList.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          updateMapStyle();
+        }
+      });
     });
 
-    const marker = geojson.features[0];
+    observer.observe(document.documentElement, { attributes: true });
 
-    const markerIcon = document.createElement('div');
-    markerIcon.className = 'markerIcon w-[85px] h-[85px] hover:w-[105px] hover:h-[105px] bg-primary-500/20 border-4 hover:border-6 border-solid border-white rounded-full overflow-hidden flex justify-center items-center hover:transition-all ease-in-out duration-500';
+    return () => observer.disconnect();
+  }, []);
 
-    const image = document.createElement('img');
-    image.src = '/images/profile/avatar.webp';
-    image.alt = 'Marker';
-    image.className = 'w-[100%] h-[100%] object-cover';
-
-    markerIcon.appendChild(image);
-
-    new mapboxgl.Marker(markerIcon)
-      .setLngLat(marker.geometry.coordinates)
-      .addTo(map.current);
-
-    const mapboxInfo = document.querySelector('.mapboxgl-control-container');
-    mapboxInfo.remove();
-
-    // Cleanup on unmount
-    return () => {
-      map.current.remove();
-    };
-  }, [lat, lng]);
+  useLayoutEffect(() => {
+    if (mapContainer.current) {
+      setWidth(mapContainer.current.offsetWidth);
+      setHeight(mapContainer.current.offsetHeight);
+      // url-${logoUrl}(-70.6616,-33.4535)/
+      setMap(`https://api.mapbox.com/styles/v1/mapbox/${mapStyle}/static/${lng},${lat},${zoom},0/${width}x${height}?access_token=${accessToken}&logo=false`);
+    }
+  }, [lat, lng, height, width, zoom, mapStyle, accessToken, mapContainer]);
 
   return (
     <div className="w-full h-full">
-      <div className={className} ref={mapContainer} />
+      <div className={className} ref={mapContainer}>
+        {map && (
+        <Image src={map} alt="Santiago Map" fill />
+        )}
+      </div>
     </div>
   );
 }

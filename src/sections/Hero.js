@@ -85,7 +85,7 @@ function Hero() {
         </div>
         <div className="order-3 md:col-span-12 lg:col-span-3 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-4">
           <Card className="!p-0">
-            <Map className="w-full h-full" />
+            <Map className="w-full h-full" mapStyle="dark-v11" />
           </Card>
           <div className="grid grid-cols-2 gap-4">
             <Link href="https://github.com/KevinCastle" target="_blank" className="w-full h-full">

@@ -8,6 +8,10 @@ const nextConfig = {
         hostname: 'i.scdn.co',
         pathname: '/image/*',
       },
+      {
+        protocol: 'https',
+        hostname: 'api.mapbox.com',
+      },
     ],
   },
 };
