@@ -3,16 +3,32 @@ import {
   PiEnvelopeSimpleFill,
   PiGithubLogoFill,
   PiLinkedinLogoFill,
+  PiMapPinFill,
   PiTiktokLogoFill,
 } from 'react-icons/pi';
 import { SiThreads } from 'react-icons/si';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import profilePic from '../../public/images/profile/avatar.webp';
 import Card from '../components/Card';
-import Map from '../components/Map';
 
 function Hero() {
+  const [time, setTime] = useState(null);
+
+  useEffect(() => {
+    const now = new Date();
+
+    const formatter = new Intl.DateTimeFormat('es-CL', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+      timeZone: 'America/Santiago',
+    });
+
+    setTime(formatter.format(now));
+  }, []);
+
   return (
     <section id="hero" className="w-full">
       <Layout className="pt-20 lg:pt-32 grid grid-cols-1 md:grid-cols-12 gap-4">
@@ -84,27 +100,33 @@ function Hero() {
           </Card>
         </div>
         <div className="order-3 md:col-span-12 lg:col-span-3 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-4">
-          <Card className="!p-0">
-            <Map className="w-full h-full" />
-          </Card>
+          <div className="grid grid-rows-2 gap-4">
+            <Card className="flex flex-col justify-center items-center !bg-secondary-950/70 hover:!bg-secondary-900/80 dark:!bg-gray-950/50 dark:hover:!bg-gray-950/60 h-full w-full !p-0">
+              <PiMapPinFill size="2rem" aria-label="map pin" role="img" />
+              <p className="text-sm sm:text-lg pt-2 uppercase font-semibold">Santiago, Chile</p>
+            </Card>
+            <Card className="flex justify-center items-center text-center !bg-secondary-950/70 hover:!bg-secondary-900/80 dark:!bg-gray-950/50 dark:hover:!bg-gray-950/60 h-full w-full !p-0">
+              <p className="text-xl sm:text-3xl uppercase font-semibold">{time}</p>
+            </Card>
+          </div>
           <div className="grid grid-cols-2 gap-4">
             <Link href="https://github.com/KevinCastle" target="_blank" className="w-full h-full">
-              <Card link className="flex justify-center items-center text-center !bg-gray-900/60 hover:!bg-gray-900/70 dark:!bg-gray-700/50 dark:hover:!bg-gray-700/60 h-full w-full">
+              <Card link className="flex justify-center items-center text-center !bg-gray-900/60 hover:!bg-gray-900/70 dark:!bg-gray-700/50 dark:hover:!bg-gray-700/60 h-full w-full !p-3">
                 <PiGithubLogoFill size="3rem" aria-label="Github" role="img" className="mx-auto" />
               </Card>
             </Link>
             <Link href="https://www.linkedin.com/in/kevin-castillo11/" target="_blank" className="w-full h-full">
-              <Card link className="flex justify-center items-center text-center !bg-[#0A66C2]/70 hover:!bg-[#0A66C2]/80 dark:!bg-[#0A66C2]/50 dark:hover:!bg-[#0A66C2]/60 h-full w-full">
+              <Card link className="flex justify-center items-center text-center !bg-[#0A66C2]/70 hover:!bg-[#0A66C2]/80 dark:!bg-[#0A66C2]/50 dark:hover:!bg-[#0A66C2]/60 h-full w-full !p-3">
                 <PiLinkedinLogoFill size="3rem" aria-label="Linkedin" role="img" className="mx-auto" />
               </Card>
             </Link>
             <Link href="https://www.threads.net/@kevcastles.dev" target="_blank" className="w-full h-full">
-              <Card link className="flex justify-center items-center text-center !bg-[#d62976]/70 hover:!bg-[#d62976]/80 dark:!bg-[#d62976]/50 dark:hover:!bg-[#d62976]/60 h-full w-full">
+              <Card link className="flex justify-center items-center text-center !bg-[#d62976]/70 hover:!bg-[#d62976]/80 dark:!bg-[#d62976]/50 dark:hover:!bg-[#d62976]/60 h-full w-full !p-3">
                 <SiThreads size="3rem" aria-label="Threads" role="img" className="mx-auto" />
               </Card>
             </Link>
             <Link href="https://tiktok.com/@kevcastles.dev" target="_blank" className="w-full h-full">
-              <Card link className="flex justify-center items-center text-center !bg-[#00b7b6]/70 hover:!bg-[#00b7b6]/80 dark:!bg-[#00F2EA]/50 dark:hover:!bg-[#00F2EA]/60 h-full w-full">
+              <Card link className="flex justify-center items-center text-center !bg-[#00b7b6]/70 hover:!bg-[#00b7b6]/80 dark:!bg-[#00F2EA]/50 dark:hover:!bg-[#00F2EA]/60 h-full w-full !p-3">
                 <PiTiktokLogoFill size="3rem" aria-label="Tiktok" role="img" className="mx-auto" />
               </Card>
             </Link>
