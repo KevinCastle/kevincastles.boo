@@ -111,22 +111,22 @@ function Hero() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Link href="https://github.com/KevinCastle" target="_blank" className="w-full h-full">
-              <Card link className="flex justify-center items-center text-center !bg-gray-900/60 hover:!bg-gray-900/70 dark:!bg-gray-700/50 dark:hover:!bg-gray-700/60 h-full w-full">
+              <Card link className="flex justify-center items-center text-center !bg-gray-900/60 hover:!bg-gray-900/70 dark:!bg-gray-700/50 dark:hover:!bg-gray-700/60 h-full w-full !p-3">
                 <PiGithubLogoFill size="3rem" aria-label="Github" role="img" className="mx-auto" />
               </Card>
             </Link>
             <Link href="https://www.linkedin.com/in/kevin-castillo11/" target="_blank" className="w-full h-full">
-              <Card link className="flex justify-center items-center text-center !bg-[#0A66C2]/70 hover:!bg-[#0A66C2]/80 dark:!bg-[#0A66C2]/50 dark:hover:!bg-[#0A66C2]/60 h-full w-full">
+              <Card link className="flex justify-center items-center text-center !bg-[#0A66C2]/70 hover:!bg-[#0A66C2]/80 dark:!bg-[#0A66C2]/50 dark:hover:!bg-[#0A66C2]/60 h-full w-full !p-3">
                 <PiLinkedinLogoFill size="3rem" aria-label="Linkedin" role="img" className="mx-auto" />
               </Card>
             </Link>
             <Link href="https://www.threads.net/@kevcastles.dev" target="_blank" className="w-full h-full">
-              <Card link className="flex justify-center items-center text-center !bg-[#d62976]/70 hover:!bg-[#d62976]/80 dark:!bg-[#d62976]/50 dark:hover:!bg-[#d62976]/60 h-full w-full">
+              <Card link className="flex justify-center items-center text-center !bg-[#d62976]/70 hover:!bg-[#d62976]/80 dark:!bg-[#d62976]/50 dark:hover:!bg-[#d62976]/60 h-full w-full !p-3">
                 <SiThreads size="3rem" aria-label="Threads" role="img" className="mx-auto" />
               </Card>
             </Link>
             <Link href="https://tiktok.com/@kevcastles.dev" target="_blank" className="w-full h-full">
-              <Card link className="flex justify-center items-center text-center !bg-[#00b7b6]/70 hover:!bg-[#00b7b6]/80 dark:!bg-[#00F2EA]/50 dark:hover:!bg-[#00F2EA]/60 h-full w-full">
+              <Card link className="flex justify-center items-center text-center !bg-[#00b7b6]/70 hover:!bg-[#00b7b6]/80 dark:!bg-[#00F2EA]/50 dark:hover:!bg-[#00F2EA]/60 h-full w-full !p-3">
                 <PiTiktokLogoFill size="3rem" aria-label="Tiktok" role="img" className="mx-auto" />
               </Card>
             </Link>
